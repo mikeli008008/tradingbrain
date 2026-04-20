@@ -79,9 +79,27 @@ def get_minervini_scan(screener_repo: str | None = None) -> dict[str, Any]:
     if not isinstance(rows, list):
         rows = []
 
+    # Build tier lookup from watchlist_status (contains current_signal)
+    tier_lookup = {}
+    for w in data.get("watchlist_status", []):
+        t = w.get("ticker")
+        s = (w.get("current_signal") or "").lower()
+        if t and s:
+            tier_lookup[t] = s
+
     tiers = {"super": [], "perfect": [], "leader": [], "watchlist": [], "other": []}
     for row in rows:
-        tier = (row.get("current_signal") or row.get("signal") or row.get("tier") or "other").lower()
+        ticker = row.get("ticker", "")
+        if ticker in tier_lookup:
+            tier = tier_lookup[ticker]
+        elif row.get("super_stock_candidate"):
+            tier = "super"
+        elif row.get("all_8_passed") and row.get("vcp", {}).get("near_pivot"):
+            tier = "perfect"
+        elif row.get("all_8_passed"):
+            tier = "leader"
+        else:
+            tier = "other"
         if "super" in tier:
             tiers["super"].append(row)
         elif "perfect" in tier:
