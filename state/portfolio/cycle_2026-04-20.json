@@ -1,0 +1,32 @@
+{
+  "date": "2026-04-20",
+  "regime": "strong",
+  "total_equity": 100000.0,
+  "dry_run": true,
+  "results": {
+    "minervini": {
+      "strategy_id": "minervini",
+      "ran": true,
+      "candidates": 0,
+      "proposals": 0,
+      "executed": 0,
+      "rejected": 0,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Allocation: $50,000 (50% \u00d7 regime_bias 1.0)"
+      ]
+    },
+    "cs_momentum": {
+      "strategy_id": "cs_momentum",
+      "ran": false,
+      "candidates": 0,
+      "proposals": 0,
+      "executed": 0,
+      "rejected": 0,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Skipped: not scheduled today (cadence=biweekly)"
+      ]
+    }
+  }
+}
