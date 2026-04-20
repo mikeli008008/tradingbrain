@@ -1,0 +1,74 @@
+name: Overnight News Sentinel
+
+on:
+  schedule:
+    # 7pm ET (after earnings releases) — 23:00 UTC summer, 00:00 UTC winter
+    - cron: "0 23 * * 1-5"
+    # 8am ET (pre-market check) — 12:00 UTC summer, 13:00 UTC winter
+    - cron: "0 12 * * 2-6"   # Tue-Sat in UTC = Mon-Fri overnight in ET
+  workflow_dispatch:
+
+jobs:
+  sentinel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run overnight sentinel
+        id: sentinel
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_PAPER: ${{ secrets.ALPACA_PAPER || 'true' }}
+          IBKR_HOST: ${{ secrets.IBKR_HOST }}
+          IBKR_PORT: ${{ secrets.IBKR_PORT }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          BROKER: ${{ secrets.BROKER || 'alpaca' }}
+        run: |
+          cd trading-brain && python -m learning.overnight_sentinel | tee /tmp/result.json
+
+      - name: Check for emergency
+        id: check
+        run: |
+          if [ -f trading-brain/state/EMERGENCY_TRIGGER ]; then
+            echo "emergency=true" >> $GITHUB_OUTPUT
+          else
+            echo "emergency=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run emergency agent (if triggered)
+        if: steps.check.outputs.emergency == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_PAPER: ${{ secrets.ALPACA_PAPER || 'true' }}
+          IBKR_HOST: ${{ secrets.IBKR_HOST }}
+          IBKR_PORT: ${{ secrets.IBKR_PORT }}
+          BROKER: ${{ secrets.BROKER || 'alpaca' }}
+          EMERGENCY_MODE: "true"
+        run: |
+          cd trading-brain && python -m agent.emergency_run
+
+      - name: Clear trigger
+        if: always()
+        run: rm -f trading-brain/state/EMERGENCY_TRIGGER
+
+      - name: Commit alerts
+        run: |
+          cd trading-brain
+          git config user.name "trading-brain"
+          git config user.email "bot@users.noreply.github.com"
+          git pull --rebase
+          git add state/
+          git diff --quiet && git diff --staged --quiet || git commit -m "sentinel: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

@@ -1,0 +1,42 @@
+name: Hourly Shadow Decisions
+
+on:
+  schedule:
+    # Every hour 14:30-20:30 UTC M-F (9:30am-4:30pm ET summer)
+    # = 7 runs/day × 5 days = ~35 decisions/week
+    - cron: "30 14-20 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Record shadow decisions
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SCREENER_URL: ${{ secrets.SCREENER_URL }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: |
+          cd trading-brain && python -m agent.shadow_run
+
+      - name: Commit shadow journal
+        run: |
+          cd trading-brain
+          git config user.name "trading-brain"
+          git config user.email "bot@users.noreply.github.com"
+          git pull --rebase
+          git add state/
+          git diff --quiet && git diff --staged --quiet || git commit -m "shadow: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

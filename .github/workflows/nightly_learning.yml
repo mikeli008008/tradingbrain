@@ -1,0 +1,45 @@
+name: Nightly Learning
+
+on:
+  schedule:
+    # 23:00 UTC (7pm ET) — after all grading data is available
+    - cron: "0 23 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Grade outcomes + forensics
+        run: |
+          cd trading-brain && python -m learning.outcome_grader
+
+      - name: Mine patterns + audit rules
+        run: |
+          cd trading-brain && python -m learning.rule_ledger
+
+      - name: Compute calibration
+        run: |
+          cd trading-brain && python -m learning.calibration
+
+      - name: Commit learning state
+        run: |
+          cd trading-brain
+          git config user.name "trading-brain"
+          git config user.email "bot@users.noreply.github.com"
+          git pull --rebase
+          git add state/
+          git diff --quiet && git diff --staged --quiet || git commit -m "learn: nightly $(date -u +%Y-%m-%d)"
+          git push

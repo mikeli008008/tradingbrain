@@ -1,0 +1,69 @@
+name: Daily Trading Agent
+
+on:
+  schedule:
+    # Run 16:15 ET (20:15 UTC summer / 21:15 UTC winter) — after close, before afterhours moves
+    - cron: "15 20 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (risk checks only, no orders)"
+        type: boolean
+        default: true
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # To commit journal/rules updates
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run tests (guardrails must pass)
+        run: |
+          cd trading-brain && python tests/test_risk_manager.py
+
+      - name: Run portfolio manager (coordinates all strategies)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_PAPER: ${{ secrets.ALPACA_PAPER || 'true' }}
+          IBKR_HOST: ${{ secrets.IBKR_HOST }}
+          IBKR_PORT: ${{ secrets.IBKR_PORT }}
+          BROKER: ${{ secrets.BROKER || 'alpaca' }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          SCREENER_URL: ${{ secrets.SCREENER_URL }}
+        run: |
+          cd trading-brain && python -m agent.portfolio_manager ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Run Minervini LLM agent (narrative journal + learned rules)
+        if: inputs.dry_run != true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_PAPER: ${{ secrets.ALPACA_PAPER || 'true' }}
+          BROKER: ${{ secrets.BROKER || 'alpaca' }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          SCREENER_URL: ${{ secrets.SCREENER_URL }}
+        run: |
+          cd trading-brain && python -m agent.run || echo "LLM agent failed non-fatally"
+
+      - name: Commit journal + rules
+        run: |
+          cd trading-brain
+          git config user.name "trading-brain"
+          git config user.email "bot@users.noreply.github.com"
+          git add state/
+          git diff --quiet && git diff --staged --quiet || git commit -m "daily: $(date -u +%Y-%m-%d) session"
+          git push

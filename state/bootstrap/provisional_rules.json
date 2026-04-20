@@ -1,0 +1,50 @@
+[
+  {
+    "tag": "vcp_breakout",
+    "prediction": "unfavorable",
+    "discovered_at": "2015-03-31",
+    "n_supporting": 197,
+    "hit_rate_with_rule": 0.614,
+    "hit_rate_baseline": 0.721,
+    "delta": -0.107,
+    "p_value": 0.0008,
+    "regime_stratification": "bull",
+    "source": "bootstrap"
+  },
+  {
+    "tag": "low_volume_warning",
+    "prediction": "unfavorable",
+    "discovered_at": "2015-09-30",
+    "n_supporting": 173,
+    "hit_rate_with_rule": 0.416,
+    "hit_rate_baseline": 0.579,
+    "delta": -0.163,
+    "p_value": 0.0,
+    "regime_stratification": "bull",
+    "source": "bootstrap"
+  },
+  {
+    "tag": "weak_3m_momentum",
+    "prediction": "unfavorable",
+    "discovered_at": "2016-11-30",
+    "n_supporting": 59,
+    "hit_rate_with_rule": 0.441,
+    "hit_rate_baseline": 0.553,
+    "delta": -0.113,
+    "p_value": 0.0817,
+    "regime_stratification": "transitional",
+    "source": "bootstrap"
+  },
+  {
+    "tag": "far_from_high",
+    "prediction": "unfavorable",
+    "discovered_at": "2018-03-31",
+    "n_supporting": 91,
+    "hit_rate_with_rule": 0.429,
+    "hit_rate_baseline": 0.537,
+    "delta": -0.109,
+    "p_value": 0.0375,
+    "regime_stratification": "bull",
+    "source": "bootstrap"
+  }
+]

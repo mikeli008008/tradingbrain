@@ -1,0 +1,77 @@
+[
+  {
+    "id": "c40267d6",
+    "description": "AVOID 'low_volume_warning' \u2014 win rate 42% vs 58% baseline, n=173, p=0.000",
+    "condition_tags": [
+      "low_volume_warning"
+    ],
+    "prediction": "unfavorable",
+    "status": "provisional",
+    "created_at": "2026-04-20",
+    "promoted_at": null,
+    "demoted_at": null,
+    "n_supporting": 173,
+    "hit_rate_with_rule": 0.416,
+    "hit_rate_baseline": 0.579,
+    "p_value": 0.0,
+    "n_since_promotion": 0,
+    "hit_rate_since_promotion": null,
+    "notes": [
+      "Bootstrap import \u2014 full 622-ticker universe 2015-2025. vcp_breakout unfavorable rejected: tagging artifact, not real signal."
+    ],
+    "source": "bootstrap",
+    "regime_stratification": "bull",
+    "live_confirmations": 0,
+    "live_confirmations_needed": 10
+  },
+  {
+    "id": "744aa229",
+    "description": "AVOID 'far_from_high' \u2014 win rate 43% vs 54% baseline, n=91, p=0.037",
+    "condition_tags": [
+      "far_from_high"
+    ],
+    "prediction": "unfavorable",
+    "status": "provisional",
+    "created_at": "2026-04-20",
+    "promoted_at": null,
+    "demoted_at": null,
+    "n_supporting": 91,
+    "hit_rate_with_rule": 0.429,
+    "hit_rate_baseline": 0.537,
+    "p_value": 0.0375,
+    "n_since_promotion": 0,
+    "hit_rate_since_promotion": null,
+    "notes": [
+      "Bootstrap import \u2014 full 622-ticker universe 2015-2025. vcp_breakout unfavorable rejected: tagging artifact, not real signal."
+    ],
+    "source": "bootstrap",
+    "regime_stratification": "bull",
+    "live_confirmations": 0,
+    "live_confirmations_needed": 10
+  },
+  {
+    "id": "e68b5c7d",
+    "description": "AVOID 'weak_3m_momentum' \u2014 win rate 44% vs 55% baseline, n=59, p=0.082",
+    "condition_tags": [
+      "weak_3m_momentum"
+    ],
+    "prediction": "unfavorable",
+    "status": "provisional",
+    "created_at": "2026-04-20",
+    "promoted_at": null,
+    "demoted_at": null,
+    "n_supporting": 59,
+    "hit_rate_with_rule": 0.441,
+    "hit_rate_baseline": 0.553,
+    "p_value": 0.0817,
+    "n_since_promotion": 0,
+    "hit_rate_since_promotion": null,
+    "notes": [
+      "Bootstrap import \u2014 full 622-ticker universe 2015-2025. vcp_breakout unfavorable rejected: tagging artifact, not real signal."
+    ],
+    "source": "bootstrap",
+    "regime_stratification": "transitional",
+    "live_confirmations": 0,
+    "live_confirmations_needed": 10
+  }
+]

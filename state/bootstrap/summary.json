@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-04-20",
+  "period": "2015-2025",
+  "n_tickers": 622,
+  "n_decisions": 45222,
+  "n_rules_provisional": 4,
+  "favorable": 0,
+  "unfavorable": 4,
+  "limitations": [
+    "Survivorship bias: current S&P 500 composition, not point-in-time",
+    "Deterministic tags differ from live LLM-generated tags",
+    "Rules marked 'provisional' \u2014 require N live-shadow confirmations to activate",
+    "RS rating check skipped in bootstrap (always-pass)"
+  ]
+}
