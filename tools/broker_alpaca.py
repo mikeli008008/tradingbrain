@@ -116,22 +116,26 @@ def place_trade(
         return {"executed": False, "dry_run": True, "reasons": decision.reasons}
 
     c = _client()
-    # 1. Market buy
+    # Market buy only — stop is placed separately after fill (see place_pending_stops)
     buy = c.submit_order(MarketOrderRequest(
         symbol=ticker, qty=shares,
         side=OrderSide.BUY, time_in_force=TimeInForce.DAY,
     ))
-    # 2. Stop loss (submitted separately; broker links via position)
-    stop = c.submit_order(StopOrderRequest(
-        symbol=ticker, qty=shares,
-        side=OrderSide.SELL, time_in_force=TimeInForce.GTC,
-        stop_price=round(stop_price, 2),
-    ))
+    # Log the pending stop for placement after fill
+    pending = STATE_DIR / "pending_stops.jsonl"
+    with pending.open("a") as f:
+        import json as _json
+        f.write(_json.dumps({
+            "ticker": ticker, "shares": shares,
+            "stop_price": round(stop_price, 2),
+            "buy_order_id": buy.id,
+            "date": date.today().isoformat(),
+        }) + "\n")
     return {
         "executed": True,
         "reasons": decision.reasons,
         "buy_order_id": buy.id,
-        "stop_order_id": stop.id,
+        "stop_order_id": "pending_after_fill",
     }
 
 
@@ -168,3 +172,41 @@ def list_positions() -> dict[str, Any]:
             for p in positions
         ]
     }
+
+
+def place_pending_stops() -> dict:
+    """Call this after market open to attach stops to filled buy orders."""
+    pending_path = STATE_DIR / "pending_stops.jsonl"
+    if not pending_path.exists():
+        return {"placed": 0}
+
+    c = _client()
+    positions = {p.symbol: p for p in c.get_all_positions()}
+    lines = pending_path.read_text().splitlines()
+    placed = 0
+    remaining = []
+
+    for line in lines:
+        if not line.strip():
+            continue
+        import json as _json
+        rec = _json.loads(line)
+        ticker = rec["ticker"]
+        if ticker not in positions:
+            remaining.append(line)  # not filled yet, keep pending
+            continue
+        try:
+            c.submit_order(StopOrderRequest(
+                symbol=ticker,
+                qty=rec["shares"],
+                side=OrderSide.SELL,
+                time_in_force=TimeInForce.GTC,
+                stop_price=rec["stop_price"],
+            ))
+            placed += 1
+        except Exception as e:
+            print(f"Stop failed for {ticker}: {e}")
+            remaining.append(line)
+
+    pending_path.write_text("\n".join(remaining) + "\n" if remaining else "")
+    return {"placed": placed, "still_pending": len(remaining)}
