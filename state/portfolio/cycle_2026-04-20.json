@@ -2,7 +2,7 @@
   "date": "2026-04-20",
   "regime": "strong",
   "total_equity": 100000.0,
-  "dry_run": true,
+  "dry_run": false,
   "results": {
     "minervini": {
       "strategy_id": "minervini",
