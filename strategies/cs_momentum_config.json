@@ -1,0 +1,9 @@
+{
+  "top_n": 10,
+  "lookback_months": 12,
+  "skip_months": 1,
+  "max_drift": 0.3,
+  "min_price": 10.0,
+  "min_avg_dollar_volume": 10000000,
+  "universe": "default"
+}

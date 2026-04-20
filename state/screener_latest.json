@@ -1,0 +1,15 @@
+{
+  "date": "2026-04-18",
+  "stocks": [
+    {"ticker": "NVDA", "signal": "Super Stock", "score": 195, "grade": "A"},
+    {"ticker": "AVGO", "signal": "Super Stock", "score": 187, "grade": "A"},
+    {"ticker": "AMD", "signal": "Perfect Setup", "score": 142, "grade": "B"},
+    {"ticker": "META", "signal": "Perfect Setup", "score": 138, "grade": "B"},
+    {"ticker": "GOOGL", "signal": "Perfect Setup", "score": 121, "grade": "A"},
+    {"ticker": "TSLA", "signal": "Perfect Setup", "score": 115, "grade": "C"},
+    {"ticker": "JPM", "signal": "Leader Profile", "score": 88, "grade": "A"},
+    {"ticker": "WMT", "signal": "Leader Profile", "score": 81, "grade": "A"},
+    {"ticker": "AAPL", "signal": "Watchlist", "score": 65, "grade": "B"},
+    {"ticker": "MSFT", "signal": "Watchlist", "score": 62, "grade": "A"}
+  ]
+}
