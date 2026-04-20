@@ -81,7 +81,7 @@ def get_minervini_scan(screener_repo: str | None = None) -> dict[str, Any]:
 
     tiers = {"super": [], "perfect": [], "leader": [], "watchlist": [], "other": []}
     for row in rows:
-        tier = (row.get("signal") or row.get("tier") or "other").lower()
+        tier = (row.get("current_signal") or row.get("signal") or row.get("tier") or "other").lower()
         if "super" in tier:
             tiers["super"].append(row)
         elif "perfect" in tier:
