@@ -1,12 +1,12 @@
 {
   "plan": {
-    "regime": "strong (SPY above MA50 and MA200, no high-volume breakdown)",
-    "macro_notes": "SPY -0.20%, QQQ -0.32%, IWM +0.57%, VIX +7.95% to 18.87. Mild risk-off undertone despite strong trend regime.",
-    "scan_results": "Zero candidates across all tiers (super/perfect/leader/watchlist) out of 623 screened. No SEPA-qualifying setups today.",
-    "positions": "None open.",
-    "decision": "Stand down. No new entries. Cash is a position.",
-    "reasoning": "When the screener returns zero qualified setups in any tier, there is no edge available. Forcing a trade from the 'other' bucket would violate SEPA methodology and my evidence-backed rules (avoid far_from_high, low_volume_warning, weak_3m_momentum). Combined with a +8% VIX spike, patience is correct."
+    "regime": "strong (SPY 708.72, above MA50/MA200)",
+    "macro_notes": "VIX +7.95% to 18.87 \u2014 minor caution. QQQ -0.32%, SPY -0.20%. Small caps positive (+0.57%).",
+    "screener_result": "0 candidates across all tiers (Super/Perfect/Leader/Watchlist) out of 623 scanned",
+    "decision": "Stand aside. No qualifying Minervini setups = no trades.",
+    "candidates": [],
+    "trades_planned": []
   },
   "trades_executed": [],
-  "reflection": "2026-04-20 session. Regime check returned 'strong' \u2014 SPY comfortably above both MAs. However, the Minervini scan returned ZERO candidates in every tier (Super/Perfect/Leader/Watchlist) across 623 screened names. This is a meaningful signal: a strong index regime with no leadership breakouts often means the tape is narrow or in a digestion phase. The VIX +7.95% move to 18.87 supports caution.\\n\\nDecision: no trades. No positions to manage. This is exactly the scenario where discipline pays \u2014 there is no 'plan B' ticker worth forcing when the screener is empty. My evidence-backed AVOID patterns (far_from_high, low_volume_warning, weak_3m_momentum) would also steer me away from trying to reach down into the 'other' bucket.\\n\\nNo new rule needed \u2014 the baseline rule 'no setup, no trade' is already implicit in the methodology. Will re-scan tomorrow. If the screener stays empty multiple days in a row while VIX keeps rising, that would be a potential regime-deterioration warning worth acting on by reducing even further (already at 0%, so moot, but noted for when positions exist)."
+  "reflection": "Session 2026-04-20: No action taken. Regime tape-read was constructive (SPY strong, above both MAs, no high-vol breakdown), but the Minervini screener returned zero candidates in every tier \u2014 Super, Perfect, Leader, and even Watchlist were all empty out of 623 scanned names. This is the clearest possible signal to stay in cash: even in a 'strong' SPY regime, if no individual stocks are setting up in proper VCP/trend templates, there is no edge to deploy. The VIX jumping ~8% in a single session while SPY drifted only -0.2% also hints at hedging/distribution under the surface. The disciplined action is to wait for the screener to produce candidates again rather than drop standards and fish in the 'other' bucket. No new learned rule needed \u2014 this is exactly the baseline methodology working as designed. Weighted evidence-backed rules (avoid low_volume_warning, far_from_high, weak_3m_momentum) were not tested today since no trades were placed."
 }
