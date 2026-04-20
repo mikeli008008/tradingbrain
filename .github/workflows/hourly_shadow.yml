@@ -29,7 +29,7 @@ jobs:
           SCREENER_URL: ${{ secrets.SCREENER_URL }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: |
-          cd trading-brain && python -m agent.shadow_run
+          python -m agent.shadow_run
 
       - name: Commit shadow journal
         run: |

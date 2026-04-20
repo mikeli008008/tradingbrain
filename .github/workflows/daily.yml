@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests (guardrails must pass)
         run: |
-          cd trading-brain && python tests/test_risk_manager.py
+          python tests/test_risk_manager.py
 
       - name: Run portfolio manager (coordinates all strategies)
         env:
@@ -44,7 +44,7 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           SCREENER_URL: ${{ secrets.SCREENER_URL }}
         run: |
-          cd trading-brain && python -m agent.portfolio_manager ${{ inputs.dry_run && '--dry-run' || '' }}
+          python -m agent.portfolio_manager ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Run Minervini LLM agent (narrative journal + learned rules)
         if: inputs.dry_run != true
@@ -57,7 +57,7 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           SCREENER_URL: ${{ secrets.SCREENER_URL }}
         run: |
-          cd trading-brain && python -m agent.run || echo "LLM agent failed non-fatally"
+          python -m agent.run || echo "LLM agent failed non-fatally"
 
       - name: Commit journal + rules
         run: |

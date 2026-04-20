@@ -24,15 +24,15 @@ jobs:
 
       - name: Grade outcomes + forensics
         run: |
-          cd trading-brain && python -m learning.outcome_grader
+          python -m learning.outcome_grader
 
       - name: Mine patterns + audit rules
         run: |
-          cd trading-brain && python -m learning.rule_ledger
+          python -m learning.rule_ledger
 
       - name: Compute calibration
         run: |
-          cd trading-brain && python -m learning.calibration
+          python -m learning.calibration
 
       - name: Commit learning state
         run: |

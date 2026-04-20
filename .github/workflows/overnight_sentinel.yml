@@ -34,7 +34,7 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           BROKER: ${{ secrets.BROKER || 'alpaca' }}
         run: |
-          cd trading-brain && python -m learning.overnight_sentinel | tee /tmp/result.json
+          python -m learning.overnight_sentinel | tee /tmp/result.json
 
       - name: Check for emergency
         id: check
@@ -57,7 +57,7 @@ jobs:
           BROKER: ${{ secrets.BROKER || 'alpaca' }}
           EMERGENCY_MODE: "true"
         run: |
-          cd trading-brain && python -m agent.emergency_run
+          python -m agent.emergency_run
 
       - name: Clear trigger
         if: always()
