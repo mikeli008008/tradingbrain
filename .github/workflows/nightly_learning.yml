@@ -36,7 +36,6 @@ jobs:
 
       - name: Commit learning state
         run: |
-          cd trading-brain
           git config user.name "trading-brain"
           git config user.email "bot@users.noreply.github.com"
           git pull --rebase

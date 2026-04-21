@@ -65,7 +65,6 @@ jobs:
 
       - name: Commit alerts
         run: |
-          cd trading-brain
           git config user.name "trading-brain"
           git config user.email "bot@users.noreply.github.com"
           git pull --rebase
