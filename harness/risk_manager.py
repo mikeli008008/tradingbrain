@@ -43,10 +43,10 @@ class RiskConfig:
 # --- Presets for different strategies ---
 
 def minervini_config() -> RiskConfig:
-    """Strict Minervini rules — concentrated, tight stops, breakout-quality only."""
+    """Minervini rules — diversified, tight stops, breakout-quality only."""
     return RiskConfig(
         max_risk_per_trade_pct=0.0075,
-        max_open_positions=5,
+        max_open_positions=15,
         max_stop_distance_pct=0.08,   # Minervini's 7-8% hard stop
         min_stop_distance_pct=0.03,
         max_new_positions_per_day=3,

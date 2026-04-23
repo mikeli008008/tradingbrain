@@ -84,7 +84,7 @@ class MinerviniStrategy(BaseStrategy):
         stop 7% below entry. Max 5 concurrent positions (Minervini rule).
         """
         held_tickers = {p["ticker"] for p in current_positions}
-        max_new = max(0, 5 - len(current_positions))
+        max_new = max(0, 15 - len(current_positions))
 
         proposals = []
         for c in candidates[:max_new]:

@@ -1,5 +1,5 @@
 {
-  "top_n": 10,
+  "top_n": 15,
   "lookback_months": 12,
   "skip_months": 1,
   "max_drift": 0.3,
