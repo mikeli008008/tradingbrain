@@ -6,10 +6,10 @@ route through the risk_manager gate.
 """
 from __future__ import annotations
 import os
-from typing import Any, Literal
-from dataclasses import asdict
-from pathlib import Path
+import uuid
 import json
+from typing import Any
+from pathlib import Path
 from datetime import date
 
 try:
@@ -26,6 +26,18 @@ from harness.risk_manager import (
 )
 
 STATE_DIR = Path(__file__).parent.parent / "state"
+
+
+class _JSONEncoder(json.JSONEncoder):
+    """Handles UUID and other non-serializable Alpaca SDK types."""
+    def default(self, obj):
+        if isinstance(obj, uuid.UUID):
+            return str(obj)
+        return super().default(obj)
+
+
+def _dumps(obj) -> str:
+    return json.dumps(obj, cls=_JSONEncoder)
 
 
 def _client() -> "TradingClient":
@@ -124,8 +136,7 @@ def place_trade(
     # Log the pending stop for placement after fill
     pending = STATE_DIR / "pending_stops.jsonl"
     with pending.open("a") as f:
-        import json as _json
-        f.write(_json.dumps({
+        f.write(_dumps({
             "ticker": ticker, "shares": shares,
             "stop_price": round(stop_price, 2),
             "buy_order_id": str(buy.id),
@@ -144,9 +155,8 @@ def close_position(ticker: str, reason: str) -> dict[str, Any]:
     c = _client()
     try:
         c.close_position(ticker)
-        # Audit
         with (STATE_DIR / "exits.jsonl").open("a") as f:
-            f.write(json.dumps({
+            f.write(_dumps({
                 "date": date.today().isoformat(),
                 "ticker": ticker,
                 "reason": reason,
@@ -183,11 +193,13 @@ def place_pending_stops() -> dict:
     c = _client()
     positions = {p.symbol: p for p in c.get_all_positions()}
 
-    # Get all open stop orders to avoid duplicate/wash trade error
+    # FIX: Check existing open stop orders to avoid wash trade / duplicate stop error
     open_orders = c.get_orders(filter=GetOrdersRequest(status=QueryOrderStatus.OPEN))
     existing_stops = {
         o.symbol for o in open_orders
-        if o.type is not None and str(o.type).lower() == "stop" and o.side == OrderSide.SELL
+        if o.type is not None
+        and str(o.type).lower() == "stop"
+        and o.side == OrderSide.SELL
     }
 
     lines = pending_path.read_text().splitlines()
@@ -197,17 +209,17 @@ def place_pending_stops() -> dict:
     for line in lines:
         if not line.strip():
             continue
-        import json as _json
-        rec = _json.loads(line)
+        rec = json.loads(line)
         ticker = rec["ticker"]
 
         if ticker not in positions:
-            remaining.append(line)  # not filled yet, keep pending
+            # Not filled yet — keep in pending
+            remaining.append(line)
             continue
 
         if ticker in existing_stops:
-            print(f"Stop already exists for {ticker}, skipping.")
-            # Don't keep in pending — it's handled
+            # Stop already attached from a previous run — remove from pending, do nothing
+            print(f"[place_pending_stops] Stop already exists for {ticker}, skipping.")
             continue
 
         try:
@@ -219,11 +231,10 @@ def place_pending_stops() -> dict:
                 stop_price=rec["stop_price"],
             ))
             placed += 1
+            print(f"[place_pending_stops] Stop placed for {ticker} @ {rec['stop_price']}")
         except Exception as e:
-            print(f"Stop failed for {ticker}: {e}")
+            print(f"[place_pending_stops] Stop failed for {ticker}: {e}")
             remaining.append(line)
 
-    pending_path.write_text("\n".join(remaining) + "\n" if remaining else "")
-    return {"placed": placed, "still_pending": len(remaining)}
     pending_path.write_text("\n".join(remaining) + "\n" if remaining else "")
     return {"placed": placed, "still_pending": len(remaining)}
