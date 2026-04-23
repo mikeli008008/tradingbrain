@@ -182,6 +182,14 @@ def place_pending_stops() -> dict:
 
     c = _client()
     positions = {p.symbol: p for p in c.get_all_positions()}
+
+    # Get all open stop orders to avoid duplicate/wash trade error
+    open_orders = c.get_orders(filter=GetOrdersRequest(status=QueryOrderStatus.OPEN))
+    existing_stops = {
+        o.symbol for o in open_orders
+        if o.type is not None and str(o.type).lower() == "stop" and o.side == OrderSide.SELL
+    }
+
     lines = pending_path.read_text().splitlines()
     placed = 0
     remaining = []
@@ -192,9 +200,16 @@ def place_pending_stops() -> dict:
         import json as _json
         rec = _json.loads(line)
         ticker = rec["ticker"]
+
         if ticker not in positions:
             remaining.append(line)  # not filled yet, keep pending
             continue
+
+        if ticker in existing_stops:
+            print(f"Stop already exists for {ticker}, skipping.")
+            # Don't keep in pending — it's handled
+            continue
+
         try:
             c.submit_order(StopOrderRequest(
                 symbol=ticker,
@@ -208,5 +223,7 @@ def place_pending_stops() -> dict:
             print(f"Stop failed for {ticker}: {e}")
             remaining.append(line)
 
+    pending_path.write_text("\n".join(remaining) + "\n" if remaining else "")
+    return {"placed": placed, "still_pending": len(remaining)}
     pending_path.write_text("\n".join(remaining) + "\n" if remaining else "")
     return {"placed": placed, "still_pending": len(remaining)}
