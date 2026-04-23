@@ -1,22 +1,27 @@
 {
   "date": "2026-04-23",
   "regime": "strong",
-  "total_equity": 100127.69,
+  "total_equity": 100149.55,
   "dry_run": false,
   "results": {
     "minervini": {
       "strategy_id": "minervini",
       "ran": true,
       "candidates": 10,
-      "proposals": 3,
+      "proposals": 8,
       "executed": 0,
-      "rejected": 3,
+      "rejected": 8,
       "skipped_conflict": 0,
       "reasons": [
-        "Allocation: $50,064 (50% \u00d7 regime_bias 1.0)",
+        "Allocation: $50,075 (50% \u00d7 regime_bias 1.0)",
         "TER: REJECT: already opened 3 new positions today",
         "APH: REJECT: already opened 3 new positions today",
-        "KLAC: REJECT: already opened 3 new positions today"
+        "KLAC: REJECT: already opened 3 new positions today",
+        "MU: REJECT: already opened 3 new positions today",
+        "ADI: REJECT: already opened 3 new positions today",
+        "AMAT: REJECT: already opened 3 new positions today",
+        "VRT: REJECT: already opened 3 new positions today",
+        "JBL: REJECT: already opened 3 new positions today"
       ]
     },
     "cs_momentum": {

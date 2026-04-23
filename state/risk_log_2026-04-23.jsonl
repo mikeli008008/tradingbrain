@@ -6,3 +6,11 @@
 {"ticker": "TER", "side": "buy", "entry": 396.19, "stop": 368.46, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
 {"ticker": "APH", "side": "buy", "entry": 150.35, "stop": 139.83, "shares": 35, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
 {"ticker": "KLAC", "side": "buy", "entry": 1804.52, "stop": 1678.2, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "TER", "side": "buy", "entry": 396.89, "stop": 369.11, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "APH", "side": "buy", "entry": 150.36, "stop": 139.83, "shares": 35, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "KLAC", "side": "buy", "entry": 1808.92, "stop": 1682.3, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "MU", "side": "buy", "entry": 477.11, "stop": 443.71, "shares": 11, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "ADI", "side": "buy", "entry": 402.2, "stop": 374.05, "shares": 13, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "AMAT", "side": "buy", "entry": 401.45, "stop": 373.35, "shares": 13, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "VRT", "side": "buy", "entry": 315.77, "stop": 293.67, "shares": 16, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}
+{"ticker": "JBL", "side": "buy", "entry": 339.03, "stop": 315.3, "shares": 15, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: already opened 3 new positions today"]}

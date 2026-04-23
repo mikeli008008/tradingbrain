@@ -6,17 +6,17 @@
   {
     "tool": "get_market_regime",
     "input": {},
-    "result_preview": "{'spy_price': 708.53, 'spy_above_ma50': True, 'spy_above_ma200': True, 'spy_high_vol_breakdown': False, 'ma50': 675.59, 'ma200': 665.05, 'regime': 'strong'}"
+    "result_preview": "{'spy_price': 708.71, 'spy_above_ma50': True, 'spy_above_ma200': True, 'spy_high_vol_breakdown': False, 'ma50': 675.6, 'ma200': 665.05, 'regime': 'strong'}"
   },
   {
     "tool": "research_macro",
     "input": {},
-    "result_preview": "{'date': '2026-04-23T19:17:53.013017', 'snapshot': {'SPY': {'name': 'S&P 500', 'price': 708.5, 'day_change_pct': -0.38}, 'QQQ': {'name': 'Nasdaq 100', 'price': 651.17, 'day_change_pct': -0.6}, 'IWM': "
+    "result_preview": "{'date': '2026-04-23T19:31:46.426074', 'snapshot': {'SPY': {'name': 'S&P 500', 'price': 708.7, 'day_change_pct': -0.35}, 'QQQ': {'name': 'Nasdaq 100', 'price': 651.38, 'day_change_pct': -0.57}, 'IWM':"
   },
   {
     "tool": "list_positions",
     "input": {},
-    "result_preview": "{'positions': [{'ticker': 'APH', 'shares': 35, 'entry': 147.315143, 'current': 150.36, 'pnl_pct': 2.07, 'pnl_usd': 106.57}, {'ticker': 'FIX', 'shares': 3, 'entry': 1769.77, 'current': 1763.95, 'pnl_pc"
+    "result_preview": "{'positions': [{'ticker': 'APH', 'shares': 35, 'entry': 147.315143, 'current': 150.365, 'pnl_pct': 2.07, 'pnl_usd': 106.74}, {'ticker': 'FIX', 'shares': 3, 'entry': 1769.77, 'current': 1766.05, 'pnl_p"
   },
   {
     "tool": "get_minervini_scan",
@@ -28,39 +28,42 @@
     "stop_reason": "tool_use"
   },
   {
-    "tool": "earnings_on_deck",
+    "tool": "get_quote",
     "input": {
-      "tickers": [
-        "APH",
-        "FIX",
-        "KLAC",
-        "LITE",
-        "TER"
-      ]
+      "ticker": "APH"
     },
-    "result_preview": "{'flagged': [{'ticker': 'APH', 'earnings_date': '2026-04-29'}, {'ticker': 'FIX', 'earnings_date': '2026-04-23'}, {'ticker': 'KLAC', 'earnings_date': '2026-04-29'}, {'ticker': 'TER', 'earnings_date': '"
-  },
-  {
-    "iteration": 2,
-    "stop_reason": "tool_use"
-  },
-  {
-    "tool": "research_ticker_news",
-    "input": {
-      "ticker": "FIX",
-      "days": 2
-    },
-    "result_preview": "{'ticker': 'FIX', 'headlines': [{'date': '', 'headline': '', 'source': '', 'url': ''}, {'date': '', 'headline': '', 'source': '', 'url': ''}, {'date': '', 'headline': '', 'source': '', 'url': ''}, {'d"
+    "result_preview": "{'ticker': 'APH', 'price': 150.37, 'high_52w': 166.71, 'pct_from_high': -9.8, 'atr_14': 4.49, 'suggested_stop_dist_pct': 4.48, 'hint': 'Stop ~1.5\u00d7 ATR below entry is a reasonable starting point.'}"
   },
   {
     "tool": "get_quote",
     "input": {
       "ticker": "FIX"
     },
-    "result_preview": "{'ticker': 'FIX', 'price': 1763.02, 'high_52w': 1798.96, 'pct_from_high': -2.0, 'atr_14': 61.52, 'suggested_stop_dist_pct': 5.23, 'hint': 'Stop ~1.5\u00d7 ATR below entry is a reasonable starting point.'}"
+    "result_preview": "{'ticker': 'FIX', 'price': 1766.39, 'high_52w': 1798.96, 'pct_from_high': -1.81, 'atr_14': 61.52, 'suggested_stop_dist_pct': 5.22, 'hint': 'Stop ~1.5\u00d7 ATR below entry is a reasonable starting point.'}"
   },
   {
-    "iteration": 3,
+    "tool": "get_quote",
+    "input": {
+      "ticker": "KLAC"
+    },
+    "result_preview": "{'ticker': 'KLAC', 'price': 1808.92, 'high_52w': 1844.59, 'pct_from_high': -1.93, 'atr_14': 56.56, 'suggested_stop_dist_pct': 4.69, 'hint': 'Stop ~1.5\u00d7 ATR below entry is a reasonable starting point.'"
+  },
+  {
+    "tool": "get_quote",
+    "input": {
+      "ticker": "LITE"
+    },
+    "result_preview": "{'ticker': 'LITE', 'price': 847.37, 'high_52w': 960.0, 'pct_from_high': -11.73, 'atr_14': 66.12, 'suggested_stop_dist_pct': 11.7, 'hint': 'Stop ~1.5\u00d7 ATR below entry is a reasonable starting point.'}"
+  },
+  {
+    "tool": "get_quote",
+    "input": {
+      "ticker": "TER"
+    },
+    "result_preview": "{'ticker': 'TER', 'price': 396.83, 'high_52w': 404.83, 'pct_from_high': -1.97, 'atr_14': 14.13, 'suggested_stop_dist_pct': 5.34, 'hint': 'Stop ~1.5\u00d7 ATR below entry is a reasonable starting point.'}"
+  },
+  {
+    "iteration": 2,
     "stop_reason": "tool_use"
   },
   {
@@ -68,34 +71,25 @@
     "input": {
       "plan": {
         "date": "2026-04-23",
-        "regime": "strong - SPY 708.53 above MA50 (675.59) and MA200 (665.05), no high-vol breakdown. VIX 19.88 (+5%) elevated but not alarming.",
-        "positions_open": 5,
-        "max_positions": 5,
-        "new_entries_planned": 0,
-        "reason_no_entries": "At max concurrent position cap (5/5). Cannot add regardless of setups.",
-        "scan_notes": "11 Super Stocks available including TER (already held), APH (already held). Strong environment but no capacity.",
-        "earnings_risk": {
-          "FIX": "reports 2026-04-23 (TODAY)",
-          "TER": "reports 2026-04-28",
-          "APH": "reports 2026-04-29",
-          "KLAC": "reports 2026-04-29"
+        "regime": "strong (SPY above MA50 and MA200, no high-vol breakdown)",
+        "macro": "SPY -0.35%, QQQ -0.57%, VIX 19.46 (+2.85%). Mild risk-off intraday but regime intact.",
+        "positions_review": {
+          "APH": "+2.07%, healthy, 9.8% from high, VCP candidate still intact",
+          "FIX": "-0.21%, near 52w high (-1.8%), flat consolidation",
+          "KLAC": "-0.45%, near 52w high (-1.9%), flat consolidation",
+          "LITE": "+0.39%, 11.7% from high, widest ATR stop \u2014 monitor",
+          "TER": "+1.06%, Super Stock in scan, 2% from high, strong leader"
         },
-        "position_health": {
-          "APH": "+2.07%",
-          "FIX": "-0.33%",
-          "KLAC": "-0.64%",
-          "LITE": "+0.37%",
-          "TER": "+0.91%"
-        },
-        "action": "Hold all. Stops in place will handle earnings risk. No cut-before-earnings rule in my book."
+        "new_entries": "NONE \u2014 at 5/5 concurrent position cap per rulebook",
+        "watchlist_notes": "TER remains Super Stock (already owned). 11 Super candidates on scan but no slots available."
       },
-      "trades_executed": [],
-      "reflection": "Quiet session. At 5/5 position cap so entries weren't on the table regardless of setup quality \u2014 and the Super tier did have compelling names (TER and APH, which I already own; the concentration is coincidentally correct). Key observation: 4 of 5 open positions report earnings within 7 days. This is a clustering risk I didn't appreciate when building the book. If all four gap down on earnings, stops will trigger simultaneously and correlated drawdown exceeds nominal per-trade risk. Worth considering a rule about earnings-date clustering across the book, but need more data before codifying. Shadow activity shows 4 would-buys / 0 skips in 5 days \u2014 tendency toward action bias. Today's 'do nothing' is the correct discipline, not a failure. VIX +5% today warrants attention; if it pushes above 22-23 with SPY weakness, defensive posture. Regime check remains strong for now.\""
+      "reflection": "Session was a disciplined no-action day. Regime is strong and the scan produced 11 Super tier candidates, but I am already at max 5 concurrent positions (APH, FIX, KLAC, LITE, TER). None of the current positions have broken thesis \u2014 all are green or within 0.5% of entry, none near stop. The temptation is to rotate out of a flat name (FIX, KLAC) into a hotter Super setup, but that would be activity-for-activity's sake. FIX and KLAC are consolidating tightly near 52w highs, which is a constructive pattern \u2014 don't abandon constructive bases. Holding position cap is the right call. Evidence-backed rules (low_volume_warning, far_from_high, weak_3m_momentum) didn't trigger any change today since I'm not entering. Macro note: VIX ticked up +2.85% to 19.46 \u2014 worth watching tomorrow but not a regime-change signal on its own. No new rule needed.",
+      "trades_executed": []
     },
     "result_preview": "{'written': True}"
   },
   {
-    "iteration": 4,
+    "iteration": 3,
     "stop_reason": "end_turn"
   }
 ]
