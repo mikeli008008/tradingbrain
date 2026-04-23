@@ -1,0 +1,17 @@
+{
+  "minervini": [
+    {
+      "ticker": "LITE",
+      "shares": 6,
+      "entry": 843.08,
+      "opened_at": "2026-04-23"
+    },
+    {
+      "ticker": "FIX",
+      "shares": 3,
+      "entry": 1764.76,
+      "opened_at": "2026-04-23"
+    }
+  ],
+  "cs_momentum": []
+}

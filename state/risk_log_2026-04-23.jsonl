@@ -1,0 +1,5 @@
+{"ticker": "TER", "side": "buy", "entry": 394.86, "stop": 367.22, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already hold TER \u2014 no averaging down (Minervini rule)"]}
+{"ticker": "APH", "side": "buy", "entry": 150.13, "stop": 139.62, "shares": 35, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already hold APH \u2014 no averaging down (Minervini rule)"]}
+{"ticker": "KLAC", "side": "buy", "entry": 1797.49, "stop": 1671.67, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already hold KLAC \u2014 no averaging down (Minervini rule)"]}
+{"ticker": "LITE", "side": "buy", "entry": 843.08, "stop": 784.06, "shares": 6, "signal_tier": "super", "approved": true, "reasons": ["APPROVED: 6sh LITE @ $843.08 stop $784.06 (risk $354, 0.35% of account)"]}
+{"ticker": "FIX", "side": "buy", "entry": 1764.76, "stop": 1641.23, "shares": 3, "signal_tier": "super", "approved": true, "reasons": ["APPROVED: 3sh FIX @ $1764.76 stop $1641.23 (risk $371, 0.37% of account)"]}
