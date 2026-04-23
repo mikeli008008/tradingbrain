@@ -128,13 +128,13 @@ def place_trade(
         f.write(_json.dumps({
             "ticker": ticker, "shares": shares,
             "stop_price": round(stop_price, 2),
-            "buy_order_id": buy.id,
+            "buy_order_id": str(buy.id),
             "date": date.today().isoformat(),
         }) + "\n")
     return {
         "executed": True,
         "reasons": decision.reasons,
-        "buy_order_id": buy.id,
+        "buy_order_id": str(buy.id),
         "stop_order_id": "pending_after_fill",
     }
 
