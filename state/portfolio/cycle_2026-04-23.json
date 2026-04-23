@@ -1,7 +1,7 @@
 {
   "date": "2026-04-23",
   "regime": "strong",
-  "total_equity": 100149.55,
+  "total_equity": 100609.69,
   "dry_run": false,
   "results": {
     "minervini": {
@@ -13,7 +13,7 @@
       "rejected": 8,
       "skipped_conflict": 0,
       "reasons": [
-        "Allocation: $50,075 (50% \u00d7 regime_bias 1.0)",
+        "Allocation: $50,305 (50% \u00d7 regime_bias 1.0)",
         "TER: REJECT: already opened 3 new positions today",
         "APH: REJECT: already opened 3 new positions today",
         "KLAC: REJECT: already opened 3 new positions today",
