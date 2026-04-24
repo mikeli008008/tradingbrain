@@ -1,0 +1,46 @@
+{
+  "date": "2026-04-24",
+  "regime": "strong",
+  "total_equity": 100756.96,
+  "dry_run": false,
+  "results": {
+    "minervini": {
+      "strategy_id": "minervini",
+      "ran": true,
+      "candidates": 10,
+      "proposals": 9,
+      "executed": 0,
+      "rejected": 9,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Allocation: $50,378 (50% \u00d7 regime_bias 1.0)",
+        "TER: REJECT: already hold TER \u2014 no averaging down (Minervini rule)",
+        "APH: REJECT: already hold APH \u2014 no averaging down (Minervini rule)",
+        "KLAC: REJECT: already hold KLAC \u2014 no averaging down (Minervini rule)",
+        "GEV: REJECT: at max positions (5)",
+        "AMAT: REJECT: at max positions (5)",
+        "ADI: REJECT: at max positions (5)",
+        "MU: REJECT: at max positions (5)",
+        "VRT: REJECT: at max positions (5)",
+        "JBL: REJECT: at max positions (5)"
+      ]
+    },
+    "cs_momentum": {
+      "strategy_id": "cs_momentum",
+      "ran": true,
+      "candidates": 15,
+      "proposals": 5,
+      "executed": 0,
+      "rejected": 5,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Allocation: $50,378 (50% \u00d7 regime_bias 1.0)",
+        "LITE: REJECT: signal tier 'leader' below minimum 'perfect'",
+        "WDC: REJECT: signal tier 'leader' below minimum 'perfect'",
+        "CIEN: REJECT: signal tier 'leader' below minimum 'perfect'",
+        "STX: REJECT: signal tier 'leader' below minimum 'perfect'",
+        "FIX: REJECT: signal tier 'leader' below minimum 'perfect'"
+      ]
+    }
+  }
+}
