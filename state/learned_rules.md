@@ -17,3 +17,6 @@ Rules here override generic reasoning — if a rule says "do not X", do not X.
 ## Self-authored rules
 
 (The agent appends rules below as it learns from mistakes)
+
+- **2026-04-27**: Before entering any position, verify earnings date is >7 days out AND >14 days from today if possible. The 7-day rule applies at entry, but if a name reports 8-14 days out, your trade has no time to build a cushion before binary risk arrives. Aim for fresh entries with at least 2-3 weeks of runway before earnings.
+  - Reason: Today I had to close TER (+2.37%) and APH (+0.7%) because they reported within 1-2 days with insufficient cushion. The trades were technically compliant with the 7-day rule at entry but provided no time to build a profit buffer. Forcing premature exits on otherwise valid setups.

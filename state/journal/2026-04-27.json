@@ -1,0 +1,36 @@
+{
+  "plan": {
+    "date": "2026-04-27",
+    "regime": "strong (SPY above MA50/MA200, no high-vol breakdown, VIX 18)",
+    "starting_positions": [
+      "APH",
+      "FIX",
+      "KLAC",
+      "LITE",
+      "TER"
+    ],
+    "actions_planned": [
+      "Close TER (earnings 04-28, thin cushion)",
+      "Close APH (earnings 04-29, near-flat)",
+      "Hold KLAC through earnings (4.37% cushion provides buffer)",
+      "Hold FIX, LITE (no earnings risk)",
+      "No new entries today \u2014 discipline over activity, full super-tier list not visible"
+    ],
+    "new_entries": []
+  },
+  "trades_executed": [
+    {
+      "action": "close",
+      "ticker": "TER",
+      "pnl_pct": 2.37,
+      "reason": "earnings tomorrow, insufficient cushion"
+    },
+    {
+      "action": "close",
+      "ticker": "APH",
+      "pnl_pct": 0.7,
+      "reason": "earnings in 2 days, no cushion"
+    }
+  ],
+  "reflection": "Strong regime day with VIX subsiding (-3.69%). Discovered three of five positions had earnings within 7 days \u2014 TER tomorrow, APH and KLAC on the 29th. Closed TER (+2.37%) and APH (+0.7%) where cushions were thinner than typical earnings move size; held KLAC where the +4.37% cushion provides meaningful buffer. Booked small gains on both rather than gamble on prints.\n\nKey lesson encoded as a rule: at entry I should verify earnings is >2 weeks out, not merely >7 days. The 7-day rule technically permits entry at day 8, but that gives the trade no runway to build a cushion before binary risk hits. Today's forced exits weren't bad luck \u2014 they were the consequence of entering too close to earnings dates.\n\nDid NOT add new positions despite freeing two slots. The super-tier scan output was partially truncated, and forcing entries with incomplete visibility violates the \"no FOMO / build slowly\" principle. Strong regime \u2260 obligation to be fully invested. Will revisit tomorrow with cleaner data and post-earnings picture on TER.\n\nEvidence-backed rules respected: did not chase any far_from_high or low_volume names. Account preserved capital, locked in two small wins, held three quality names."
+}

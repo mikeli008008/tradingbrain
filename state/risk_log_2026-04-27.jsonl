@@ -1,0 +1,9 @@
+{"ticker": "APH", "side": "buy", "entry": 148.64, "stop": 138.24, "shares": 36, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already hold APH \u2014 no averaging down (Minervini rule)"]}
+{"ticker": "TER", "side": "buy", "entry": 402.0, "stop": 373.86, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already hold TER \u2014 no averaging down (Minervini rule)"]}
+{"ticker": "KLAC", "side": "buy", "entry": 1900.0, "stop": 1767.0, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already hold KLAC \u2014 no averaging down (Minervini rule)"]}
+{"ticker": "GEV", "side": "buy", "entry": 1120.23, "stop": 1041.81, "shares": 4, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ADI", "side": "buy", "entry": 392.59, "stop": 365.11, "shares": 13, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "AMAT", "side": "buy", "entry": 404.86, "stop": 376.52, "shares": 13, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MU", "side": "buy", "entry": 524.56, "stop": 487.84, "shares": 10, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GLW", "side": "buy", "entry": 168.01, "stop": 156.25, "shares": 32, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "JBL", "side": "buy", "entry": 340.8, "stop": 316.94, "shares": 15, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
