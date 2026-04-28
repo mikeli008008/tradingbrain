@@ -1,0 +1,38 @@
+{
+  "plan": {
+    "date": "2026-04-28",
+    "regime": "strong (SPY above MA50 & MA200, no high-vol breakdown)",
+    "macro_intraday": "risk-off: SPY -0.49%, QQQ -1.01%, IWM -1.17%, VIX 17.83 (-1.05%)",
+    "starting_positions": [
+      "FIX -2.25%",
+      "KLAC +0.15% (earnings 4/29)",
+      "LITE -5.52% (earnings 5/5, 17.57% from high)"
+    ],
+    "actions": [
+      "Close LITE \u2014 triple negative (near stop, far_from_high, earnings 7d)",
+      "Close KLAC \u2014 cushion evaporated overnight before tomorrow's earnings",
+      "Hold FIX \u2014 clean, no earnings flag, healthy",
+      "No new entries \u2014 top super-tier candidates (APH, TER) blocked by earnings; macro weak intraday; scan truncated"
+    ],
+    "candidates_evaluated": [
+      "APH (super, earnings 4/29 \u2014 skip)",
+      "TER (super, earnings 4/28 \u2014 skip)"
+    ],
+    "max_new_positions": 0
+  },
+  "trades_executed": [
+    {
+      "ticker": "LITE",
+      "action": "close",
+      "pnl_pct": -5.52,
+      "reason": "triple negative: near stop + far_from_high + earnings within 7d"
+    },
+    {
+      "ticker": "KLAC",
+      "action": "close",
+      "pnl_pct": 0.15,
+      "reason": "earnings tomorrow with no cushion"
+    }
+  ],
+  "reflection": "Defensive day. Closed two positions: LITE for -5.52% (textbook losing trade \u2014 was approaching stop, fit the far_from_high evidence-rule warning, and had earnings within 7 days; should have exited yesterday alongside TER/APH but didn't because the 7-day rule technically permitted holding). KLAC closed at +0.15% \u2014 yesterday I held it because of a +4.37% cushion before tomorrow's print, but that cushion evaporated overnight. Cushion-based earnings holds are fragile; one bad day erases the rationale.\n\nDid not open new positions despite freeing slots and still being in strong regime. Reasoning: (1) the two highest-rated super-tier names (APH, TER) both report this week \u2014 blocked by my own self-authored rule about wanting 2-3 weeks runway; (2) macro intraday is risk-off with QQQ/IWM down >1%; (3) scan output was truncated (same issue as yesterday) so I lacked visibility into the other 12 super-tier names. Better to wait for post-earnings reactions on the megacap-tech/semi names this week and re-engage with cleaner data.\n\nLesson candidate: when an existing position has earnings approaching and a profit cushion, that cushion is a depreciating asset \u2014 it can vanish in a single session of market weakness. Need to think about absolute days-to-earnings as the primary gate, not cushion size as a workaround. But I want to observe this pattern one more time before encoding it as a rule (KLAC could rip on earnings tomorrow and prove me wrong).\n\nAccount state: 1 position (FIX), 4 slots open, dry powder preserved through earnings season turbulence."
+}

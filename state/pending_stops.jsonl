@@ -1,2 +1,10 @@
 {"ticker": "LITE", "shares": 6, "stop_price": 784.06, "buy_order_id": "86f9f16e-15f1-48d7-a15e-5239f3da3596", "date": "2026-04-23"}
 {"ticker": "FIX", "shares": 3, "stop_price": 1641.23, "buy_order_id": "26c19d5c-62f1-4b9d-bee1-51cd36232c10", "date": "2026-04-23"}
+{"ticker": "APH", "shares": 37, "stop_price": 133.66, "buy_order_id": "bae36f9a-409c-44f3-9736-ca37f8c62a4b", "date": "2026-04-28"}
+{"ticker": "TER", "shares": 13, "stop_price": 353.52, "buy_order_id": "54b67e66-4825-4caa-bff9-fa5b120c1cc6", "date": "2026-04-28"}
+{"ticker": "GEV", "shares": 4, "stop_price": 1012.7, "buy_order_id": "fea5cd09-8d0b-4eff-bf00-2ad858e60054", "date": "2026-04-28"}
+{"ticker": "ADI", "shares": 13, "stop_price": 356.43, "buy_order_id": "27205b3f-5c74-4748-813f-e1c68a0f87d0", "date": "2026-04-28"}
+{"ticker": "AMAT", "shares": 13, "stop_price": 354.43, "buy_order_id": "63dfd94a-4154-41b8-849e-9a8b0fed1dc3", "date": "2026-04-28"}
+{"ticker": "MU", "shares": 10, "stop_price": 468.99, "buy_order_id": "10a604a7-38f8-4537-b397-074139617296", "date": "2026-04-28"}
+{"ticker": "VRT", "shares": 17, "stop_price": 283.68, "buy_order_id": "8fe5b601-8808-4bdb-9edd-a105902ec03b", "date": "2026-04-28"}
+{"ticker": "JBL", "shares": 16, "stop_price": 307.67, "buy_order_id": "dc6083b4-dd91-4381-ace6-1b802b0ca594", "date": "2026-04-28"}

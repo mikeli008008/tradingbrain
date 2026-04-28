@@ -1,0 +1,9 @@
+{"ticker": "APH", "side": "buy", "entry": 143.72, "stop": 133.66, "shares": 37, "signal_tier": "super", "approved": true, "reasons": ["APPROVED: 37sh APH @ $143.72 stop $133.66 (risk $372, 0.37% of account)"]}
+{"ticker": "TER", "side": "buy", "entry": 380.13, "stop": 353.52, "shares": 13, "signal_tier": "super", "approved": true, "reasons": ["APPROVED: 13sh TER @ $380.13 stop $353.52 (risk $346, 0.35% of account)"]}
+{"ticker": "KLAC", "side": "buy", "entry": 1808.97, "stop": 1682.34, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: already hold KLAC \u2014 no averaging down (Minervini rule)"]}
+{"ticker": "GEV", "side": "buy", "entry": 1088.93, "stop": 1012.7, "shares": 4, "signal_tier": "super", "approved": true, "reasons": ["APPROVED: 4sh GEV @ $1088.93 stop $1012.70 (risk $305, 0.31% of account)"]}
+{"ticker": "ADI", "side": "buy", "entry": 383.26, "stop": 356.43, "shares": 13, "signal_tier": "perfect", "approved": true, "reasons": ["APPROVED: 13sh ADI @ $383.26 stop $356.43 (risk $349, 0.35% of account)"]}
+{"ticker": "AMAT", "side": "buy", "entry": 381.11, "stop": 354.43, "shares": 13, "signal_tier": "perfect", "approved": true, "reasons": ["APPROVED: 13sh AMAT @ $381.11 stop $354.43 (risk $347, 0.35% of account)"]}
+{"ticker": "MU", "side": "buy", "entry": 504.29, "stop": 468.99, "shares": 10, "signal_tier": "perfect", "approved": true, "reasons": ["APPROVED: 10sh MU @ $504.29 stop $468.99 (risk $353, 0.36% of account)"]}
+{"ticker": "VRT", "side": "buy", "entry": 305.03, "stop": 283.68, "shares": 17, "signal_tier": "perfect", "approved": true, "reasons": ["APPROVED: 17sh VRT @ $305.03 stop $283.68 (risk $363, 0.37% of account)"]}
+{"ticker": "JBL", "side": "buy", "entry": 330.83, "stop": 307.67, "shares": 16, "signal_tier": "perfect", "approved": true, "reasons": ["APPROVED: 16sh JBL @ $330.83 stop $307.67 (risk $371, 0.37% of account)"]}

@@ -1,2 +1,4 @@
 {"date": "2026-04-27", "ticker": "TER", "reason": "Earnings tomorrow (04-28). Only +2.37% cushion vs ~4% ATR \u2014 insufficient buffer for binary event risk. Locking in gain rather than gambling on the print."}
 {"date": "2026-04-27", "ticker": "APH", "reason": "Earnings 04-29. Cushion only +0.7%, essentially flat. Cannot justify holding through binary event with no buffer. Re-enter post-print if setup remains."}
+{"date": "2026-04-28", "ticker": "LITE", "reason": "Triple negative: -5.52% loss approaching stop, 17.57% below 52w high (far_from_high evidence rule), and earnings 2026-05-05 (7 days). Thesis broken; preserve capital before binary event."}
+{"date": "2026-04-28", "ticker": "KLAC", "reason": "Earnings tomorrow (2026-04-29). Yesterday's +4.37% cushion evaporated to +0.15% today. Going into print at flat is unfavorable risk/reward \u2014 same logic as yesterday's TER/APH closes. Reclaim slot for cleaner setup."}
