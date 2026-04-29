@@ -1,0 +1,2 @@
+{"ticker": "KLAC", "side": "buy", "entry": 1816.21, "stop": 1689.08, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: hit daily trade limit (10)"]}
+{"ticker": "GOOGL", "side": "buy", "entry": 349.94, "stop": 325.44, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: hit daily trade limit (10)"]}
