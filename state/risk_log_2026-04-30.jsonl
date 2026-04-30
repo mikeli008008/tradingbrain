@@ -1,0 +1,5 @@
+{"ticker": "LITE", "side": "buy", "entry": 902.32, "stop": 839.16, "shares": 5, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "APH", "side": "buy", "entry": 147.27, "stop": 136.96, "shares": 36, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "KLAC", "side": "buy", "entry": 1750.35, "stop": 1627.83, "shares": 3, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOGL", "side": "buy", "entry": 384.8, "stop": 357.86, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "NVDA", "side": "buy", "entry": 199.57, "stop": 185.6, "shares": 26, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
