@@ -1,0 +1,3 @@
+{"ticker": "STX", "side": "buy", "entry": 726.93, "stop": 676.04, "shares": 7, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LITE", "side": "buy", "entry": 949.93, "stop": 883.43, "shares": 5, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LRCX", "side": "buy", "entry": 256.72, "stop": 238.75, "shares": 20, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
