@@ -1,0 +1,27 @@
+{
+  "plan": {
+    "date": "2026-05-04",
+    "regime": "strong (SPY above MA50/MA200, no high-vol breakdown)",
+    "macro_notes": "VIX +7.65% to 18.29, SPY -0.37%, QQQ -0.19%, IWM -0.50%. Mild risk-off but not regime-breaking.",
+    "open_positions": 7,
+    "position_capacity": "AT/OVER capacity (rule: max 5; currently 7 carried from prior days). No new entries permitted.",
+    "candidates_reviewed": [
+      {
+        "ticker": "STX",
+        "tier": "super",
+        "decision": "SKIP",
+        "reason": "Price 738.54 vs VCP pivot 433.84 = ~70% extended past pivot. Closed +7.91% on 5/1 at exact 52w high. Classic parabolic chase \u2014 violates Minervini 'no buying >3% past pivot' rule."
+      },
+      {
+        "ticker": "LITE",
+        "tier": "super",
+        "decision": "SKIP",
+        "reason": "Earnings 2026-05-05 (tomorrow). Violates 7-day earnings rule absolutely."
+      }
+    ],
+    "existing_position_earnings_check": "All 7 holdings clear of next-7-day earnings. Per 4/29 rule, swept the book.",
+    "action": "No new trades. Manage existing book."
+  },
+  "trades_executed": [],
+  "reflection": "Disciplined no-trade day. Three converging reasons made this an easy hold: (1) already over my 5-position cap with 7 open trades carried from prior sessions, (2) the #1 Super candidate STX is parabolically extended ~70% past its VCP pivot \u2014 this is a textbook FOMO trap masquerading as strength, (3) the #2 Super candidate LITE reports earnings tomorrow.\\n\\nThe shadow log warning is significant: 15 would-buys / 0 skips in 5 days. That ratio is wildly out of line with reality \u2014 I've been over-trading and rationalizing. Today I followed the rules instead of forcing action. The evidence-backed rule [744aa229] (avoid 'far_from_high' \u2014 but more importantly, avoid 'far_from_PIVOT') applies here in spirit: STX at 0.0% from 52w high after a +7.91% gap is not a low-risk entry, it's an 'in-the-blow-off' entry.\\n\\nBook is healthy: MU +10.5%, FIX +7.2%, VRT +6.6% leading; only GEV slightly underwater at -2.4%, well within stop. Earnings sweep on existing positions confirmed all clear for 7+ days \u2014 the 4/29 process rule is now habit.\\n\\nKey lesson reinforced: when the screener's top names are either (a) extended 50%+ past pivot or (b) reporting tomorrow, the correct action is zero. The screener finds what's strong; the operator decides what's actionable. Most days, the intersection is small."
+}

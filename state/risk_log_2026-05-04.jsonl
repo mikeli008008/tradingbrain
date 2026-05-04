@@ -1,0 +1,5 @@
+{"ticker": "STX", "side": "buy", "entry": 738.54, "stop": 686.84, "shares": 7, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LITE", "side": "buy", "entry": 976.18, "stop": 907.85, "shares": 5, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOGL", "side": "buy", "entry": 383.25, "stop": 356.42, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TER", "side": "buy", "entry": 337.44, "stop": 313.82, "shares": 16, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "SNDK", "side": "buy", "entry": 1255.86, "stop": 1167.95, "shares": 4, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
