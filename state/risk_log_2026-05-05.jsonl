@@ -1,0 +1,5 @@
+{"ticker": "STX", "side": "buy", "entry": 771.01, "stop": 717.04, "shares": 7, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LITE", "side": "buy", "entry": 994.56, "stop": 924.94, "shares": 5, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TER", "side": "buy", "entry": 357.1, "stop": 332.1, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "NVDA", "side": "buy", "entry": 196.5, "stop": 182.75, "shares": 28, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOGL", "side": "buy", "entry": 388.43, "stop": 361.24, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
