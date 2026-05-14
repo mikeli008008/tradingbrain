@@ -1,0 +1,6 @@
+{"ticker": "LITE", "side": "buy", "entry": 1001.81, "stop": 931.68, "shares": 5, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LRCX", "side": "buy", "entry": 299.15, "stop": 278.21, "shares": 18, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPWR", "side": "buy", "entry": 1613.97, "stop": 1500.99, "shares": 3, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "KEYS", "side": "buy", "entry": 361.55, "stop": 336.24, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "STX", "side": "buy", "entry": 804.76, "stop": 748.43, "shares": 7, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "SNDK", "side": "buy", "entry": 1382.72, "stop": 1285.93, "shares": 4, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
