@@ -1,0 +1,6 @@
+{"ticker": "GOOG", "side": "buy", "entry": 384.9, "stop": 357.96, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LRCX", "side": "buy", "entry": 273.38, "stop": 254.24, "shares": 19, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOGL", "side": "buy", "entry": 387.66, "stop": 360.52, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "KEYS", "side": "buy", "entry": 344.11, "stop": 320.02, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "AVGO", "side": "buy", "entry": 411.07, "stop": 382.3, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "SNDK", "side": "buy", "entry": 1383.29, "stop": 1286.46, "shares": 3, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
