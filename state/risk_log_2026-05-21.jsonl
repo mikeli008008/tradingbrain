@@ -1,0 +1,7 @@
+{"ticker": "GOOG", "side": "buy", "entry": 383.47, "stop": 356.63, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LRCX", "side": "buy", "entry": 302.24, "stop": 281.08, "shares": 18, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOGL", "side": "buy", "entry": 387.66, "stop": 360.52, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPWR", "side": "buy", "entry": 1561.25, "stop": 1451.96, "shares": 3, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "AVGO", "side": "buy", "entry": 414.57, "stop": 385.55, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "SNDK", "side": "buy", "entry": 1542.24, "stop": 1434.28, "shares": 3, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WDC", "side": "buy", "entry": 486.46, "stop": 452.41, "shares": 11, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
