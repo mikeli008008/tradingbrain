@@ -1,0 +1,7 @@
+{"ticker": "STX", "side": "buy", "entry": 846.01, "stop": 786.79, "shares": 6, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LRCX", "side": "buy", "entry": 327.16, "stop": 304.26, "shares": 17, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WDC", "side": "buy", "entry": 517.72, "stop": 481.48, "shares": 10, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TER", "side": "buy", "entry": 369.21, "stop": 343.37, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CAT", "side": "buy", "entry": 914.7, "stop": 850.67, "shares": 6, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "SNDK", "side": "buy", "entry": 1646.54, "stop": 1531.28, "shares": 3, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CRDO", "side": "buy", "entry": 234.32, "stop": 217.92, "shares": 23, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
