@@ -1,0 +1,6 @@
+{"ticker": "SNDK", "side": "buy", "entry": 2090.71, "stop": 1944.36, "shares": 1, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.78% exceeds limit 2.00%"]}
+{"ticker": "LLY", "side": "buy", "entry": 1208.12, "stop": 1123.55, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.78% exceeds limit 2.00%"]}
+{"ticker": "CRDO", "side": "buy", "entry": 238.0, "stop": 221.34, "shares": 12, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.78% exceeds limit 2.00%"]}
+{"ticker": "TER", "side": "buy", "entry": 436.86, "stop": 406.28, "shares": 6, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.78% exceeds limit 2.00%"]}
+{"ticker": "STX", "side": "buy", "entry": 899.9, "stop": 836.91, "shares": 3, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.78% exceeds limit 2.00%"]}
+{"ticker": "WDC", "side": "buy", "entry": 586.45, "stop": 545.4, "shares": 4, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.78% exceeds limit 2.00%"]}
