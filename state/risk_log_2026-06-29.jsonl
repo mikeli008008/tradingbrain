@@ -1,0 +1,7 @@
+{"ticker": "SNDK", "side": "buy", "entry": 2050.39, "stop": 1906.86, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ALAB", "side": "buy", "entry": 455.96, "stop": 424.04, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LLY", "side": "buy", "entry": 1229.93, "stop": 1143.83, "shares": 4, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TER", "side": "buy", "entry": 463.21, "stop": 430.79, "shares": 12, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MNST", "side": "buy", "entry": 97.64, "stop": 90.81, "shares": 60, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "STX", "side": "buy", "entry": 968.53, "stop": 900.73, "shares": 6, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WDC", "side": "buy", "entry": 651.88, "stop": 606.25, "shares": 9, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
