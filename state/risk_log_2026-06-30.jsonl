@@ -1,0 +1,6 @@
+{"ticker": "SNDK", "side": "buy", "entry": 2273.73, "stop": 2114.57, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LLY", "side": "buy", "entry": 1199.43, "stop": 1115.47, "shares": 5, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ALAB", "side": "buy", "entry": 483.02, "stop": 449.21, "shares": 12, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "STX", "side": "buy", "entry": 965.0, "stop": 897.45, "shares": 6, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WDC", "side": "buy", "entry": 638.72, "stop": 594.01, "shares": 9, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TRGP", "side": "buy", "entry": 268.14, "stop": 249.37, "shares": 22, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
