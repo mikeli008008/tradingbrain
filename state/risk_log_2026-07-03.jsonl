@@ -1,0 +1,12 @@
+{"ticker": "LLY", "side": "buy", "entry": 1213.91, "stop": 1128.94, "shares": 4, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ALAB", "side": "buy", "entry": 406.42, "stop": 377.97, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 270.41, "stop": 251.48, "shares": 21, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CRDO", "side": "buy", "entry": 241.91, "stop": 224.98, "shares": 23, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MNST", "side": "buy", "entry": 97.6, "stop": 90.77, "shares": 58, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "INCY", "side": "buy", "entry": 116.86, "stop": 108.68, "shares": 48, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CFG", "side": "buy", "entry": 70.98, "stop": 66.01, "shares": 80, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WDC", "side": "buy", "entry": 539.0, "stop": 431.2, "shares": 6, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "LITE", "side": "buy", "entry": 728.32, "stop": 582.66, "shares": 4, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "MU", "side": "buy", "entry": 975.56, "stop": 780.45, "shares": 3, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "STX", "side": "buy", "entry": 820.16, "stop": 656.13, "shares": 4, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "CIEN", "side": "buy", "entry": 422.46, "stop": 337.97, "shares": 8, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
