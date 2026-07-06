@@ -1,0 +1,7 @@
+{"ticker": "LLY", "side": "buy", "entry": 1200.06, "stop": 1116.06, "shares": 4, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ALAB", "side": "buy", "entry": 432.74, "stop": 402.45, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 277.91, "stop": 258.46, "shares": 20, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CRDO", "side": "buy", "entry": 265.55, "stop": 246.96, "shares": 21, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MNST", "side": "buy", "entry": 97.37, "stop": 90.55, "shares": 59, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "INCY", "side": "buy", "entry": 115.62, "stop": 107.53, "shares": 49, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CFG", "side": "buy", "entry": 72.11, "stop": 67.06, "shares": 79, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
