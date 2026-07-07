@@ -1,0 +1,7 @@
+{"ticker": "ALAB", "side": "buy", "entry": 382.89, "stop": 356.09, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.24% exceeds limit 2.00%"]}
+{"ticker": "LLY", "side": "buy", "entry": 1235.56, "stop": 1149.07, "shares": 4, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.25% exceeds limit 2.00%"]}
+{"ticker": "HWM", "side": "buy", "entry": 275.43, "stop": 256.15, "shares": 20, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.25% exceeds limit 2.00%"]}
+{"ticker": "MNST", "side": "buy", "entry": 96.92, "stop": 90.14, "shares": 57, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.25% exceeds limit 2.00%"]}
+{"ticker": "ANET", "side": "buy", "entry": 166.46, "stop": 154.81, "shares": 33, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.25% exceeds limit 2.00%"]}
+{"ticker": "INCY", "side": "buy", "entry": 118.05, "stop": 109.79, "shares": 47, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.25% exceeds limit 2.00%"]}
+{"ticker": "CFG", "side": "buy", "entry": 71.78, "stop": 66.76, "shares": 78, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.25% exceeds limit 2.00%"]}
