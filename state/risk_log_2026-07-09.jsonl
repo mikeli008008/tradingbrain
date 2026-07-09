@@ -1,0 +1,7 @@
+{"ticker": "LLY", "side": "buy", "entry": 1216.95, "stop": 1131.76, "shares": 4, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ALAB", "side": "buy", "entry": 417.45, "stop": 388.23, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 273.77, "stop": 254.61, "shares": 20, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MNST", "side": "buy", "entry": 96.55, "stop": 89.79, "shares": 59, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "LRCX", "side": "buy", "entry": 353.17, "stop": 328.45, "shares": 16, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "INCY", "side": "buy", "entry": 118.52, "stop": 110.22, "shares": 48, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TRGP", "side": "buy", "entry": 273.02, "stop": 253.91, "shares": 21, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
