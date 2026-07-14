@@ -1,0 +1,7 @@
+{"ticker": "LLY", "side": "buy", "entry": 1152.54, "stop": 1071.86, "shares": 4, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 276.78, "stop": 257.41, "shares": 20, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MNST", "side": "buy", "entry": 98.0, "stop": 91.14, "shares": 58, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ANET", "side": "buy", "entry": 182.57, "stop": 169.79, "shares": 31, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WST", "side": "buy", "entry": 357.65, "stop": 332.61, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "INCY", "side": "buy", "entry": 114.88, "stop": 106.84, "shares": 49, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WELL", "side": "buy", "entry": 236.0, "stop": 219.48, "shares": 24, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
