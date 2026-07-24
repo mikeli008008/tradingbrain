@@ -1,0 +1,8 @@
+{"ticker": "LLY", "side": "buy", "entry": 1196.03, "stop": 1112.31, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 289.26, "stop": 269.01, "shares": 9, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CF", "side": "buy", "entry": 125.07, "stop": 116.32, "shares": 22, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "DVA", "side": "buy", "entry": 235.44, "stop": 218.96, "shares": 11, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 309.24, "stop": 287.59, "shares": 9, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "AMD", "side": "buy", "entry": 521.95, "stop": 485.41, "shares": 5, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "INCY", "side": "buy", "entry": 117.67, "stop": 109.43, "shares": 23, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "APH", "side": "buy", "entry": 152.67, "stop": 141.98, "shares": 18, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
