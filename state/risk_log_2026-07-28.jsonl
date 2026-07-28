@@ -1,0 +1,8 @@
+{"ticker": "LLY", "side": "buy", "entry": 1220.66, "stop": 1135.21, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
+{"ticker": "HWM", "side": "buy", "entry": 286.04, "stop": 266.02, "shares": 9, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
+{"ticker": "CF", "side": "buy", "entry": 122.92, "stop": 114.32, "shares": 22, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
+{"ticker": "DVA", "side": "buy", "entry": 239.46, "stop": 222.7, "shares": 11, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
+{"ticker": "MPC", "side": "buy", "entry": 306.05, "stop": 284.63, "shares": 8, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
+{"ticker": "INCY", "side": "buy", "entry": 129.93, "stop": 120.83, "shares": 20, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
+{"ticker": "WELL", "side": "buy", "entry": 243.57, "stop": 226.52, "shares": 11, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
+{"ticker": "ROST", "side": "buy", "entry": 251.03, "stop": 233.46, "shares": 10, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.21% exceeds limit 2.00%"]}
