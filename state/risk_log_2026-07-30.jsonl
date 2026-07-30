@@ -1,0 +1,8 @@
+{"ticker": "LLY", "side": "buy", "entry": 1154.97, "stop": 1074.12, "shares": 2, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CF", "side": "buy", "entry": 125.77, "stop": 116.97, "shares": 21, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 277.28, "stop": 257.87, "shares": 9, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 314.08, "stop": 292.09, "shares": 8, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TRV", "side": "buy", "entry": 375.99, "stop": 349.67, "shares": 7, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ROST", "side": "buy", "entry": 252.57, "stop": 234.89, "shares": 10, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "VLO", "side": "buy", "entry": 311.71, "stop": 289.89, "shares": 8, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ROKU", "side": "buy", "entry": 145.09, "stop": 134.93, "shares": 18, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
