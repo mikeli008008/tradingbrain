@@ -1,0 +1,13 @@
+{"ticker": "CF", "side": "buy", "entry": 125.19, "stop": 116.43, "shares": 43, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 282.26, "stop": 262.5, "shares": 19, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "APH", "side": "buy", "entry": 160.7, "stop": 149.45, "shares": 33, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 316.47, "stop": 294.32, "shares": 17, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "TPR", "side": "buy", "entry": 152.37, "stop": 141.7, "shares": 35, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "DDOG", "side": "buy", "entry": 267.97, "stop": 249.21, "shares": 20, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ROST", "side": "buy", "entry": 251.07, "stop": 233.5, "shares": 21, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "STT", "side": "buy", "entry": 184.16, "stop": 171.27, "shares": 29, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WDC", "side": "buy", "entry": 544.84, "stop": 435.87, "shares": 6, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "MU", "side": "buy", "entry": 823.03, "stop": 658.42, "shares": 4, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "LITE", "side": "buy", "entry": 713.94, "stop": 571.15, "shares": 4, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "STX", "side": "buy", "entry": 856.13, "stop": 684.9, "shares": 3, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "CIEN", "side": "buy", "entry": 377.05, "stop": 301.64, "shares": 8, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
