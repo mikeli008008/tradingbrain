@@ -1,0 +1,8 @@
+{"ticker": "HWM", "side": "buy", "entry": 286.34, "stop": 266.3, "shares": 19, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "BMY", "side": "buy", "entry": 65.47, "stop": 60.89, "shares": 83, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "APH", "side": "buy", "entry": 163.34, "stop": 151.91, "shares": 33, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOG", "side": "buy", "entry": 372.47, "stop": 346.4, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 307.03, "stop": 285.54, "shares": 17, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "DDOG", "side": "buy", "entry": 273.6, "stop": 254.45, "shares": 20, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "STT", "side": "buy", "entry": 183.67, "stop": 170.81, "shares": 29, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MNST", "side": "buy", "entry": 93.55, "stop": 87.0, "shares": 58, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
