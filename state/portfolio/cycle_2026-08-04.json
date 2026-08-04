@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-04",
+  "regime": "strong",
+  "total_equity": 104153.19,
+  "dry_run": false,
+  "results": {
+    "minervini": {
+      "strategy_id": "minervini",
+      "ran": true,
+      "candidates": 10,
+      "proposals": 8,
+      "executed": 0,
+      "rejected": 8,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Allocation: $52,077 (50% \u00d7 regime_bias 1.0)",
+        "HWM: REJECT: at max positions (5)",
+        "GOOGL: REJECT: at max positions (5)",
+        "APH: REJECT: at max positions (5)",
+        "GOOG: REJECT: at max positions (5)",
+        "BMY: REJECT: at max positions (5)",
+        "DDOG: REJECT: at max positions (5)",
+        "STT: REJECT: at max positions (5)",
+        "ROST: REJECT: at max positions (5)"
+      ]
+    },
+    "cs_momentum": {
+      "strategy_id": "cs_momentum",
+      "ran": false,
+      "candidates": 0,
+      "proposals": 0,
+      "executed": 0,
+      "rejected": 0,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Skipped: not scheduled today (cadence=biweekly)"
+      ]
+    }
+  }
+}
