@@ -1,0 +1,8 @@
+{"ticker": "AVGO", "side": "buy", "entry": 416.08, "stop": 386.95, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 336.42, "stop": 312.87, "shares": 16, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HWM", "side": "buy", "entry": 281.34, "stop": 261.65, "shares": 19, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOG", "side": "buy", "entry": 343.0, "stop": 318.99, "shares": 16, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "GOOGL", "side": "buy", "entry": 343.8, "stop": 319.73, "shares": 16, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HPE", "side": "buy", "entry": 54.38, "stop": 50.57, "shares": 102, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "DELL", "side": "buy", "entry": 440.97, "stop": 410.1, "shares": 12, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CRDO", "side": "buy", "entry": 247.69, "stop": 230.35, "shares": 22, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
