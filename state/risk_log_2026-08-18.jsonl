@@ -1,0 +1,6 @@
+{"ticker": "TER", "side": "buy", "entry": 404.29, "stop": 375.99, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.54% exceeds limit 2.00%"]}
+{"ticker": "STX", "side": "buy", "entry": 903.68, "stop": 840.42, "shares": 6, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.54% exceeds limit 2.00%"]}
+{"ticker": "HWM", "side": "buy", "entry": 292.65, "stop": 272.16, "shares": 19, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.54% exceeds limit 2.00%"]}
+{"ticker": "TSM", "side": "buy", "entry": 413.41, "stop": 384.47, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: daily loss -2.54% exceeds limit 2.00%"]}
+{"ticker": "CRDO", "side": "buy", "entry": 245.97, "stop": 228.75, "shares": 22, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.54% exceeds limit 2.00%"]}
+{"ticker": "HPE", "side": "buy", "entry": 55.69, "stop": 51.79, "shares": 100, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: daily loss -2.54% exceeds limit 2.00%"]}
