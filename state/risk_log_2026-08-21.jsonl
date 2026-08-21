@@ -1,0 +1,7 @@
+{"ticker": "VLO", "side": "buy", "entry": 348.86, "stop": 324.44, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CF", "side": "buy", "entry": 129.6, "stop": 120.53, "shares": 42, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 360.72, "stop": 335.47, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ABNB", "side": "buy", "entry": 187.3, "stop": 174.19, "shares": 29, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "EOG", "side": "buy", "entry": 153.05, "stop": 142.34, "shares": 36, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HPE", "side": "buy", "entry": 53.45, "stop": 49.71, "shares": 103, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "OXY", "side": "buy", "entry": 61.3, "stop": 57.01, "shares": 90, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
