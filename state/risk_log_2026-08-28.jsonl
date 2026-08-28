@@ -1,0 +1,13 @@
+{"ticker": "VLO", "side": "buy", "entry": 346.59, "stop": 322.33, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "EXPD", "side": "buy", "entry": 190.72, "stop": 177.37, "shares": 28, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CF", "side": "buy", "entry": 125.71, "stop": 116.91, "shares": 43, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 363.54, "stop": 338.09, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "IBKR", "side": "buy", "entry": 96.55, "stop": 89.79, "shares": 56, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HPE", "side": "buy", "entry": 54.41, "stop": 50.6, "shares": 100, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "DELL", "side": "buy", "entry": 472.26, "stop": 439.2, "shares": 11, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "NTAP", "side": "buy", "entry": 190.64, "stop": 177.3, "shares": 28, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "WDC", "side": "buy", "entry": 462.0, "stop": 369.6, "shares": 7, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "MU", "side": "buy", "entry": 935.39, "stop": 748.31, "shares": 3, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "STX", "side": "buy", "entry": 847.2, "stop": 677.76, "shares": 4, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "LITE", "side": "buy", "entry": 956.14, "stop": 764.91, "shares": 3, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
+{"ticker": "RY", "side": "buy", "entry": 204.54, "stop": 163.63, "shares": 16, "signal_tier": "leader", "approved": false, "reasons": ["REJECT: signal tier 'leader' below minimum 'perfect'"]}
