@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-29",
+  "regime": "strong",
+  "total_equity": 101322.04,
+  "dry_run": false,
+  "results": {
+    "minervini": {
+      "strategy_id": "minervini",
+      "ran": false,
+      "candidates": 0,
+      "proposals": 0,
+      "executed": 0,
+      "rejected": 0,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Skipped: not scheduled today (cadence=daily)"
+      ]
+    },
+    "cs_momentum": {
+      "strategy_id": "cs_momentum",
+      "ran": false,
+      "candidates": 0,
+      "proposals": 0,
+      "executed": 0,
+      "rejected": 0,
+      "skipped_conflict": 0,
+      "reasons": [
+        "Skipped: not scheduled today (cadence=biweekly)"
+      ]
+    }
+  }
+}
