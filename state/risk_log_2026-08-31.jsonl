@@ -1,0 +1,8 @@
+{"ticker": "VLO", "side": "buy", "entry": 358.92, "stop": 333.8, "shares": 15, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "EXPD", "side": "buy", "entry": 189.65, "stop": 176.37, "shares": 28, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "FTNT", "side": "buy", "entry": 170.93, "stop": 158.96, "shares": 31, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CF", "side": "buy", "entry": 130.03, "stop": 120.93, "shares": 41, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "INCY", "side": "buy", "entry": 123.22, "stop": 114.59, "shares": 44, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "HPE", "side": "buy", "entry": 52.24, "stop": 48.58, "shares": 104, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "DELL", "side": "buy", "entry": 456.01, "stop": 424.09, "shares": 11, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ROKU", "side": "buy", "entry": 156.93, "stop": 145.94, "shares": 34, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
