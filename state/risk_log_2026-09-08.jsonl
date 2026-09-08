@@ -1,0 +1,7 @@
+{"ticker": "VLO", "side": "buy", "entry": 382.85, "stop": 356.05, "shares": 14, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "NVDA", "side": "buy", "entry": 225.73, "stop": 209.93, "shares": 24, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MS", "side": "buy", "entry": 216.24, "stop": 201.1, "shares": 25, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "MPC", "side": "buy", "entry": 397.77, "stop": 369.93, "shares": 13, "signal_tier": "super", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "OXY", "side": "buy", "entry": 60.65, "stop": 56.4, "shares": 91, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "ROKU", "side": "buy", "entry": 155.34, "stop": 144.47, "shares": 35, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
+{"ticker": "CVX", "side": "buy", "entry": 209.8, "stop": 195.11, "shares": 26, "signal_tier": "perfect", "approved": false, "reasons": ["REJECT: at max positions (5)"]}
