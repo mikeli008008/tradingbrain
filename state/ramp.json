@@ -1,0 +1,8 @@
+{
+  "mode": "shadow_only",
+  "broker": "alpaca",
+  "alpaca_paper": true,
+  "started": "2026-09-10",
+  "phase": "week_1_2_shadow_learning",
+  "notes": "Daily Trading Agent workflow disabled until Han re-enables after shadow validation. Hourly shadow + Nightly learning + Overnight sentinel stay on."
+}

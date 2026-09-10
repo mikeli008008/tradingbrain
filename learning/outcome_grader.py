@@ -81,7 +81,13 @@ def grade_at_horizon(horizon: int) -> dict[str, int]:
             skipped += 1
             continue
 
-        pnl_pct = (price_then - d.entry_price) / d.entry_price * 100
+        entry = getattr(d, "entry_price", None)
+        if entry is None or entry == 0:
+            # Bad/missing entry prices must not crash the nightly job
+            skipped += 1
+            continue
+
+        pnl_pct = (price_then - entry) / entry * 100
         setattr(d, f"price_at_t{horizon}", round(price_then, 2))
         setattr(d, f"pnl_pct_t{horizon}", round(pnl_pct, 2))
 
