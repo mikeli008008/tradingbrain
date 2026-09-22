@@ -2,8 +2,8 @@ name: Nightly Learning
 
 on:
   schedule:
-    # 23:00 UTC (7pm ET) — after all grading data is available
-    - cron: "0 23 * * 1-5"
+    # 23:30 UTC — after Overnight Sentinel (23:00) so both don't race on state/
+    - cron: "30 23 * * 1-5"
   workflow_dispatch:
 
 jobs:
@@ -36,9 +36,16 @@ jobs:
 
       - name: Commit learning state
         run: |
+          set -euo pipefail
           git config user.name "trading-brain"
           git config user.email "bot@users.noreply.github.com"
-          git pull --rebase
+          # Learning scripts dirty state/ before this step. Commit first, then rebase.
           git add state/
-          git diff --quiet && git diff --staged --quiet || git commit -m "learn: nightly $(date -u +%Y-%m-%d)"
-          git push
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "learn: nightly $(date -u +%Y-%m-%d)"
+          else
+            echo "No learning state changes to commit"
+            exit 0
+          fi
+          git pull --rebase origin main
+          git push origin HEAD:main
