@@ -33,9 +33,15 @@ jobs:
 
       - name: Commit shadow journal
         run: |
+                    set -euo pipefail
           git config user.name "trading-brain"
           git config user.email "bot@users.noreply.github.com"
-          git pull --rebase
           git add state/
-          git diff --quiet && git diff --staged --quiet || git commit -m "shadow: $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "shadow: $(date -u +%Y-%m-%dT%H:%MZ)"
+          else
+            echo "No shadow state changes to commit"
+            exit 0
+          fi
+          git pull --rebase origin main
+          git push origin HEAD:main
