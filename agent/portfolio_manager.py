@@ -116,11 +116,37 @@ def get_strategy_positions(strategy_id: str) -> list[dict]:
 
 # --- The orchestrator ---
 
+def _load_ramp() -> dict[str, Any]:
+    """Ops ramp — shadow_only / dry_run / paper_trading. See docs/OPS_RELIABILITY.md."""
+    ramp_path = STATE / "ramp.json"
+    if not ramp_path.exists():
+        return {"mode": "shadow_only", "alpaca_paper": True}
+    return json.loads(ramp_path.read_text())
+
+
 def run_portfolio_cycle(dry_run: bool = False) -> dict[str, Any]:
     """
     The main entry — called by the daily workflow. Walks each strategy,
     runs those that are due today, executes trades through risk gates.
     """
+    ramp = _load_ramp()
+    mode = ramp.get("mode", "shadow_only")
+    if not ramp.get("alpaca_paper", True):
+        return {
+            "halted": True,
+            "reason": "ramp.alpaca_paper=false blocked — paper-only policy",
+            "ramp": ramp,
+        }
+    if mode == "shadow_only" and not dry_run:
+        return {
+            "halted": True,
+            "reason": "ramp.mode=shadow_only — refusing non-dry-run cycle",
+            "ramp": ramp,
+            "hint": "Pass --dry-run or advance state/ramp.json per docs/OPS_RELIABILITY.md",
+        }
+    if mode == "dry_run":
+        dry_run = True
+
     config = PortfolioConfig.load()
 
     # Market context shared across strategies

@@ -8,6 +8,10 @@ on:
     - cron: "0 12 * * 2-6"   # Tue-Sat in UTC = Mon-Fri overnight in ET
   workflow_dispatch:
 
+concurrency:
+  group: tradingbrain-state
+  cancel-in-progress: false
+
 jobs:
   sentinel:
     runs-on: ubuntu-latest
@@ -39,7 +43,8 @@ jobs:
       - name: Check for emergency
         id: check
         run: |
-          if [ -f trading-brain/state/EMERGENCY_TRIGGER ]; then
+          # Trigger is written to state/EMERGENCY_TRIGGER (repo root), not trading-brain/
+          if [ -f state/EMERGENCY_TRIGGER ]; then
             echo "emergency=true" >> $GITHUB_OUTPUT
           else
             echo "emergency=false" >> $GITHUB_OUTPUT
@@ -61,19 +66,19 @@ jobs:
 
       - name: Clear trigger
         if: always()
-        run: rm -f trading-brain/state/EMERGENCY_TRIGGER
+        run: rm -f state/EMERGENCY_TRIGGER
+
+      - name: Upload sentinel artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentinel-state-${{ github.run_id }}
+          path: |
+            state/overnight_alerts/
+            state/emergency_actions.jsonl
+          if-no-files-found: warn
+          retention-days: 14
 
       - name: Commit alerts
         run: |
-                    set -euo pipefail
-          git config user.name "trading-brain"
-          git config user.email "bot@users.noreply.github.com"
-          git add state/
-          if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "sentinel: $(date -u +%Y-%m-%dT%H:%MZ)"
-          else
-            echo "No sentinel state changes to commit"
-            exit 0
-          fi
-          git pull --rebase origin main
-          git push origin HEAD:main
+          bash .github/scripts/commit_state.sh "sentinel: $(date -u +%Y-%m-%dT%H:%MZ)"

@@ -4,5 +4,12 @@
   "alpaca_paper": true,
   "started": "2026-09-10",
   "phase": "week_1_2_shadow_learning",
-  "notes": "Daily Trading Agent workflow disabled until Han re-enables after shadow validation. Hourly shadow + Nightly learning + Overnight sentinel stay on."
+  "notes": "Daily Trading Agent stays disabled_manually until OPS_RELIABILITY.md re-enable criteria are met. Hourly shadow + Nightly learning + Overnight sentinel stay on. Paper-only; never set alpaca_paper false here without an explicit live decision. See docs/OPS_RELIABILITY.md.",
+  "updated": "2026-09-22",
+  "reenable_daily_when": {
+    "nightly_green_streak_days": 5,
+    "min_process_quality": 0.5,
+    "first_week": "dry_run",
+    "doc": "docs/OPS_RELIABILITY.md"
+  }
 }
