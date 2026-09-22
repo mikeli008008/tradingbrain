@@ -1,15 +1,24 @@
 name: Daily Trading Agent
 
+# KEEP DISABLED until ramp.json allows paper/dry-run and process_quality is healthy.
+# Re-enable only via GitHub Actions UI after reading docs/OPS_RELIABILITY.md.
+# This workflow NEVER flips ALPACA_PAPER off. Schedule always forces --dry-run
+# unless workflow_dispatch sets dry_run=false AND ramp mode is paper_trading.
+
 on:
   schedule:
-    # Run 16:15 ET (20:15 UTC summer / 21:15 UTC winter) — after close, before afterhours moves
+    # Run 16:15 ET (20:15 UTC summer / 21:15 UTC winter) — after close
     - cron: "15 20 * * 1-5"
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Dry run (risk checks only, no orders)"
+        description: "Dry run (risk checks only, no orders). Leave true unless ramp allows paper."
         type: boolean
         default: true
+
+concurrency:
+  group: tradingbrain-state
+  cancel-in-progress: false
 
 jobs:
   trade:
@@ -32,6 +41,37 @@ jobs:
         run: |
           python tests/test_risk_manager.py
 
+      - name: Enforce ramp / paper-only gate
+        id: ramp
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          from pathlib import Path
+          ramp = json.loads(Path("state/ramp.json").read_text())
+          mode = ramp.get("mode", "shadow_only")
+          paper = ramp.get("alpaca_paper", True)
+          print(f"ramp mode={mode} alpaca_paper={paper}")
+          # Schedule events have no inputs → always dry-run
+          event = os.environ.get("GITHUB_EVENT_NAME", "")
+          dispatch_dry = os.environ.get("INPUT_DRY_RUN", "true").lower()
+          if event == "schedule":
+              dry = True
+          else:
+              dry = dispatch_dry in ("true", "1", "yes", "")
+          # Hard stop: never place orders while shadow_only
+          if mode == "shadow_only" and not dry:
+              print("REFUSING: ramp mode is shadow_only — use dry_run=true or advance ramp.json")
+              sys.exit(1)
+          if not paper:
+              print("REFUSING: alpaca_paper=false is blocked by ops policy (paper-only)")
+              sys.exit(1)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"dry_run={'true' if dry else 'false'}\n")
+              f.write(f"mode={mode}\n")
+          PY
+        env:
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
+
       - name: Run portfolio manager (coordinates all strategies)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -44,10 +84,14 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           SCREENER_URL: ${{ secrets.SCREENER_URL }}
         run: |
-          python -m agent.portfolio_manager ${{ inputs.dry_run && '--dry-run' || '' }}
+          if [ "${{ steps.ramp.outputs.dry_run }}" = "true" ]; then
+            python -m agent.portfolio_manager --dry-run
+          else
+            python -m agent.portfolio_manager
+          fi
 
       - name: Run Minervini LLM agent (narrative journal + learned rules)
-        if: inputs.dry_run != true
+        if: steps.ramp.outputs.dry_run != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
@@ -59,10 +103,19 @@ jobs:
         run: |
           python -m agent.run || echo "LLM agent failed non-fatally"
 
+      - name: Upload daily artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-state-${{ github.run_id }}
+          path: |
+            state/journal/
+            state/portfolio/
+            state/traces/
+            state/learned_rules.md
+          if-no-files-found: warn
+          retention-days: 30
+
       - name: Commit journal + rules
         run: |
-          git config user.name "trading-brain"
-          git config user.email "bot@users.noreply.github.com"
-          git add state/
-          git diff --quiet && git diff --staged --quiet || git commit -m "daily: $(date -u +%Y-%m-%d) session"
-          git push
+          bash .github/scripts/commit_state.sh "daily: $(date -u +%Y-%m-%d) session"

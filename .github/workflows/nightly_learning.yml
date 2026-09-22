@@ -6,6 +6,11 @@ on:
     - cron: "30 23 * * 1-5"
   workflow_dispatch:
 
+# Serialize all state/ writers (shadow, sentinel, learn, daily)
+concurrency:
+  group: tradingbrain-state
+  cancel-in-progress: false
+
 jobs:
   learn:
     runs-on: ubuntu-latest
@@ -34,18 +39,21 @@ jobs:
         run: |
           python -m learning.calibration
 
+      # Persist learning even if git push fails later (lost forensics/calibration
+      # was the historical failure mode when commit raced a dirty tree).
+      - name: Upload learning artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: learning-state-${{ github.run_id }}
+          path: |
+            state/forensics/
+            state/calibration/
+            state/rules/
+            state/shadow/
+          if-no-files-found: warn
+          retention-days: 30
+
       - name: Commit learning state
         run: |
-          set -euo pipefail
-          git config user.name "trading-brain"
-          git config user.email "bot@users.noreply.github.com"
-          # Learning scripts dirty state/ before this step. Commit first, then rebase.
-          git add state/
-          if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "learn: nightly $(date -u +%Y-%m-%d)"
-          else
-            echo "No learning state changes to commit"
-            exit 0
-          fi
-          git pull --rebase origin main
-          git push origin HEAD:main
+          bash .github/scripts/commit_state.sh "learn: nightly $(date -u +%Y-%m-%d)"

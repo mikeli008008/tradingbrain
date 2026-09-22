@@ -196,16 +196,32 @@ def run_sentinel() -> dict[str, Any]:
 
     all_tickers = list(set(position_tickers + watchlist_tickers))
     if not all_tickers:
-        return {"scanned": 0, "alerts": []}
+        today = date.today().isoformat()
+        hb = ALERTS_DIR / f"{today}.jsonl"
+        with hb.open("a") as f:
+            f.write(json.dumps({
+                "type": "heartbeat",
+                "scanned": 0,
+                "alerts": 0,
+                "ts": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                "note": "no positions or watchlist tickers",
+            }) + "\n")
+        return {"scanned": 0, "alerts": [], "alerts_total": 0, "emergency_triggered": False}
 
     alerts = scan_tickers(all_tickers, position_map)
 
-    # Persist
+    # Persist alerts + a one-line heartbeat so the run is observable even when quiet
     today = date.today().isoformat()
     path = ALERTS_DIR / f"{today}.jsonl"
     with path.open("a") as f:
         for a in alerts:
             f.write(json.dumps(asdict(a), default=str) + "\n")
+        f.write(json.dumps({
+            "type": "heartbeat",
+            "scanned": len(all_tickers),
+            "alerts": len(alerts),
+            "ts": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        }) + "\n")
 
     # Summarize for output
     by_severity = {"catastrophic": [], "negative": [], "positive": []}

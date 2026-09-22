@@ -78,12 +78,19 @@ Plus a **demotion mechanism** — every active rule re-audits against post-promo
 
 ## Architecture
 
+> **Ops status**: see [`docs/OPS_RELIABILITY.md`](docs/OPS_RELIABILITY.md) and
+> `state/ramp.json`. Week 1–2 is **shadow_only** — Daily Trading Agent stays
+> disabled until re-enable criteria are met. All state-writing workflows share
+> concurrency group `tradingbrain-state` and commit via
+> `.github/scripts/commit_state.sh` (with Actions artifact fallback).
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  GitHub Actions (3 schedules)                                   │
-│  • daily.yml @ 16:15 ET — main trading agent                    │
-│  • hourly_shadow.yml @ hourly mkt hrs — shadow decisions        │
-│  • nightly_learning.yml @ 23:00 UTC — grade + mine + audit      │
+│  GitHub Actions (serialized on tradingbrain-state)              │
+│  • hourly_shadow.yml @ :30 14–20 UTC M–F — shadow decisions     │
+│  • overnight_sentinel.yml @ 23:00 + 12:00 UTC — news scan       │
+│  • nightly_learning.yml @ 23:30 UTC — grade + mine + audit      │
+│  • daily.yml @ 20:15 UTC M–F — trading agent (DISABLED; dry-run)│
 └─────────────────────────────────────────────────────────────────┘
          ↓                     ↓                    ↓
   agent/run.py         agent/shadow_run.py   learning/*.py
