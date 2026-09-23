@@ -21,7 +21,7 @@
     ],
     "source": "bootstrap",
     "regime_stratification": "bull",
-    "live_confirmations": 0,
+    "live_confirmations": 5,
     "live_confirmations_needed": 10
   },
   {
