@@ -1,0 +1,25 @@
+{
+  "ready": true,
+  "n_decisions": 58,
+  "brier_score": 0.3201,
+  "overall_bias": 0.277,
+  "mean_confidence": 0.673,
+  "mean_hit_rate": 0.397,
+  "buckets": [
+    {
+      "range": "55%-70%",
+      "n": 40,
+      "stated": "65.1%",
+      "actual": "42.5%",
+      "error": 0.226
+    },
+    {
+      "range": "70%-85%",
+      "n": 18,
+      "stated": "72.2%",
+      "actual": "33.3%",
+      "error": 0.388
+    }
+  ],
+  "interpretation": "SIGNIFICANTLY OVERCONFIDENT. Your stated confidence exceeds actual performance by > 8 pp. Dial down high-confidence calls and treat '80%+' setups as closer to 60%."
+}
