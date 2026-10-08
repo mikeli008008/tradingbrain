@@ -1,0 +1,15 @@
+{
+  "graded_count": 58,
+  "overall_hit_rate": 0.397,
+  "buy_hit_rate": 0.397,
+  "avg_buy_pnl_t5_pct": -10.22,
+  "n_buys": 58,
+  "n_skips": 0,
+  "quadrants": {
+    "skilled_win": 17,
+    "lucky_win": 6,
+    "unlucky_loss": 0,
+    "mistake": 35
+  },
+  "process_quality": 0.293
+}
