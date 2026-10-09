@@ -1,3 +1,32 @@
+> ## ⛔ RETIRED — 2026-10-08
+>
+> **All four workflows are disabled. This repo is an archive. Do not re-enable without reading this.**
+>
+> Both strategies this bot traded were tested in the `nq-replay` research lab on
+> nine years of survivorship-free US daily data (all tickers 2016-10 → 2025-09,
+> not just current index members), under pre-registration and a fixed pass bar:
+>
+> | Strategy | Result |
+> |---|---|
+> | **Minervini SEPA** (the daily sleeve) | **FAIL.** 1,131 trades, 28.4% win, avg R −0.038, t −0.82, PF 0.93. Negative in 3 of 4 eras. All 8 cells of a 2×2×2 isolation at or below zero. The 50/150/200 trend template did not beat a dumb MA10/MA20 control. |
+> | **Cross-sectional momentum** (the bi-weekly sleeve) | **Below bar.** +8.8%/yr excess over an equal-weight liquid universe, t 1.85 against a 2.0 bar (8-cell noise bar 2.7). Positive in all four eras and survives 2× cost — a genuine near-miss, but **the tested books hold 174–349 names. This bot held 10–15.** That concentration was never tested. |
+>
+> Evidence: `mikeli008008/nq-replay` → `swing/results/report_minervini_sepa.md`,
+> `swing/results/report_xs_momentum.md`, `research/LEDGER.md` (2026-10-08 entries).
+>
+> **Two reasons this repo's own learning loop could not have found that:**
+> 1. The bootstrap ran on 622 *current* S&P members — survivorship bias, flagged in its own output.
+> 2. The rule-promotion gate (n≥20, |Δ|>10%, p<0.10 ≈ t 1.65, single test) is looser than the
+>    research bar (t≥2, PF≥1.2, 2× cost, top-1% removal, era split, multiple-testing correction).
+>    Cross-sectional momentum *fails* the research bar and would *pass* this gate.
+>
+> **Worth salvaging:** `harness/risk_manager.py` — a hard-coded risk veto with tests, strategy-agnostic.
+> The research lab has no execution layer; if something ever passes there, lift this.
+>
+> **Not worth salvaging:** state-in-git. Four crons doing `git add → commit → pull --rebase → push`
+> with no `concurrency:` guard is why the runs kept failing.
+
+
 # Trading Brain 🧠 — Learning Edition
 
 An autonomous AI trading agent running the Minervini SEPA strategy, engineered for **maximum rate of self-improvement** while preserving capital.
